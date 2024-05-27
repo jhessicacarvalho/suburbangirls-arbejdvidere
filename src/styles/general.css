@@ -1,0 +1,76 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #d9d9d9;
+}
+
+:root {
+  --grey: #d9d9d9;
+  --pink: #f499b8;
+  --green: #575b47;
+  --shadow: rgb(81, 77, 77);
+}
+
+@font-face {
+  font-family: Amiko-Regular;
+  src: url(../fonts/Amiko-Regular.ttf);
+}
+
+@font-face {
+  font-family: Amiko-Bold;
+  src: url(../fonts/Amiko-Bold.ttf);
+}
+
+@font-face {
+  font-family: mostWasted;
+  src: url(../fonts/mostwasted.woff2);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-family: mostWasted, serif;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+    margin-top: 0.4em;
+  }
+  h2 {
+    font-family: Amiko-Bold;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  p {
+    font-family: Amiko-Regular;
+    font-size: 1em;
+    line-height: 1.8em;
+    margin-bottom: 2em;
+    font-weight: normal;
+  }
+}
+
+
+@media (min-width: 769px) {
+  h1 {
+    font-family: mostWasted, serif;
+    font-size: 7em;
+    margin-bottom: 0.5em;
+    margin-top: 0.4em;
+  }
+  h2 {
+    font-family: Amiko-Bold;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  p {
+    font-family: Amiko-Regular;
+    font-size: 2em;
+    line-height: 1.5em;
+    margin-bottom: 2em;
+    font-weight: normal;
+  }
+}
