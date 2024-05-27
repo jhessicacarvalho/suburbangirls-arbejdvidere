@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +28,7 @@ body {
 
 @font-face {
   font-family: mostWasted;
-  src: url(../fonts/mostwasted.woff2);
+  src: url(/fonts/mostwasted.woff2);
 }
 
 @media (max-width: 768px) {
@@ -52,7 +51,6 @@ body {
     font-weight: normal;
   }
 }
-
 
 @media (min-width: 769px) {
   h1 {
