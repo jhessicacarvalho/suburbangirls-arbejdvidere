@@ -1,4 +1,80 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/general.css";
+import Button from "../components/Button.astro";
 ---
+
+<MainLayout>
+  <img class="ansog_billede" src="/ansog_billede.jpg" alt="To kvinder" />
+<div class="tekst_container">
+  <h2>Vil du være med i SUBURBANGIRLS 2024?</h2>
+<p><strong>SÅDAN SØGER DU</strong><br>For at ansøge om at være en del af det nye SUBURBANGIRLS hold skal du udfylde det vedhæftede ansøgningsskema, som du finder længere nede ved “Ansøg nu”, hvor du hvor du fortæller lidt om dig selv og om dit liv med musik.</p>
+<p>Når du har sendt din ansøgning vil du modtage en ‘Tak for din ansøgning’ mail retur. Får du ikke den, så er det ikke sikkert vi har modtaget din ansøgning.</p>
+<p>Har du spørgsmål eller ønsker mere information. Skriv på projektets mail: suburbangirlsdk@gmail.com</p>
+</div>
+
+<div class="grid_container">
+<img class="forsidebillede2" src="/ubg.webp" alt="billede af sub" />
+
+  <div class="ansog_tekst_box">
+    <div class="logo_container">
+    <p class="deadline">DEADLINE D. 30.11.24</p>
+    <p>Kickstart din karriere!</p>
+    <Button text="ANSØG NU"/>
+  </div>
+</div>
+<img class="logo" src="/svger/logo.svg" alt="logo" />
+</div>
+</MainLayout>
+<style>
+    .ansog_billede{
+    width: 100%;
+  height: auto;
+  margin-bottom: 5%;
+  }
+  .tekst_container{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /*ANSØG MED BILLEDE*/
+
+  .grid_container{
+    display: grid;
+    margin-top: 3%;
+  }
+.forsidebillede2 {
+  grid-column: 1;
+    grid-row: 1;
+    object-fit: cover; Scale and crop
+    object-position: 80% center;
+    width: 100%;
+    height: 65vw;
+    margin-top: -5vw;
+    transform: scaleX(-1); /* Flipper billedet vandret */
+}
+
+.ansog_tekst_box{
+  grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    margin-top: 12%;
+    margin-left: 3%;
+}
+
+.deadline{
+  margin-bottom: -2%;
+    color: var(--pink);
+}
+
+.logo{
+  grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    justify-self: right;
+    margin-right: 7%;
+    margin-top: 17%;
+    width: 22%;
+}
+
+</style>

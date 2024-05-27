@@ -1,18 +1,372 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/general.css";
+import Samarbejds from "../components/Samarbejds.astro";
+import Button from "../components/Button.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <MainLayout />
-    <h1>Astro</h1>
-  </body>
-</html>
+<MainLayout>
+<div class="forsidebillede_container">
+        <img src="/forside.jpg" alt="forside billede" class="forsidebillede">
+        <h1 class="forside_overskrift">SUBURBANGIRLS</h1>
+        <h1 class="forside_overskrift_skygge">SUBURBANGIRLS</h1>
+        <div class="tekst-overlay">
+         <h2>KICKSTART DIN KARRIERE</h2>
+    <p class="forside_pb">MED VORES TALENTFORLØB</p>
+    <Button text="ANSØG NU"/>
+        </div>
+</div>
+
+    <div class="logo_container">
+    <img class="logo" src="/svger/logo.svg" alt="logo" /></div>
+    <p class="forside_p">SUBURBANGIRLS er et musikfællesskab, hvor du kan udvikle dine færdigheder og få indsigt i musikbranchen gennem møder med erfarne sangskrivere, producere og kunstnere. Her får du professionel vejledning og karriererådgivning fra brancheeksperter, samt muligheden for at opbygge et stærkt netværk af ligesindede kunstnere. SUBURBANGIRLS vil gerne ændre kønsbalancen i musikbranchen.</p>
+    <img class="forsidebillede2" src="/ubg.webp" alt="billede af sub" />
+
+    <video controls class="video">
+        <source src="/promovideo.mp4" type="video/mp4">
+    </video>
+
+
+    <img class="pink-img1" src="../paper-texture_pink_01.gif" alt="pink papir der er revet over" >    
+   
+   
+    <div class="pink-container">
+
+      
+        <div class="hvid_box">
+            <img class="tape1" src="../svger/tape.svg" alt="tape">
+    <img class="tape2" src="../svger/tape.svg" alt="tape">
+            <h2>ANSØGNINGSFRIST</h2>
+            <p>30. NOVEMBER 2023</p>
+            <Button text="ANSØG NU" class="gron_knap"/>
+    </div>
+    
+
+   
+         <div class="gron_box">
+            <img class="tape3" src="../svger/tape.svg" alt="tape">
+        <img class="tape4" src="../svger/tape.svg" alt="tape">
+            <h2>INFO-EVENT ONLINE</h2>
+            <p>21. NOVEMBER KL. 19.00</p>
+            <Button text="LINK"/>
+        </div>
+        
+
+    </div>
+    <img class="pink-img2" src="../paper-texture_pink_03.gif" alt="pink papir der er revet over" >
+  
+    <Samarbejds />
+</MainLayout>
+
+<style>
+
+    /* FORSIDE BILLEDE LAYOUT*/
+.forsidebillede_container{
+    display: grid;
+    width: 100%;
+    height: 43vh; /* Full viewport height mobile */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Forside billedet */
+.forsidebillede {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scale and crop */
+    object-position: 17% center;
+}
+/* Overskrifter */
+
+.forside_overskrift, .forside_overskrift_skygge {
+    font-size: 15vw;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    margin-top: -1vw;
+}
+.forside_overskrift{
+    color: var(--pink);
+    z-index: 1;
+}
+.forside_overskrift_skygge{
+    color: white;
+    margin-left: 1vw;
+    margin-top: -1.2vw;
+}
+
+/* Tekst overlay */
+.tekst-overlay {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    justify-self: self-start;
+    align-self: center;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-top: 28vw;
+    margin-left: 6vw;
+}
+.tekst-overlay h2{
+    font-size: 4vw;
+    margin-bottom: -1vw;
+    color: white;
+}
+
+.forside_pb{
+    margin-bottom: 1vw;
+}
+
+/********************************* */
+
+/*KNAP*/
+.button{
+    border: solid;
+    border-width: medium;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(0 0 0 / 30%);
+    transition: background-color 0.3s, color 0.3s;
+    padding: 1.5vw 3vw;
+    font-size: 16px;
+    cursor: pointer;
+    border-width: 0.8vw; /* Justér kantens tykkelse*/
+}
+
+/*****LOGO */
+.logo_container{
+display: flex;
+justify-content: center;
+margin-top: 1vw;
+margin-bottom: 4vw;
+}
+
+.logo{
+    scale: 0.9;
+}
+
+/*BILLEDER*/
+.forsidebillede2 {
+    object-fit: cover; /* Scale and crop */
+    object-position: 80% center;
+    width: 100%;
+    height: 80vw;
+    margin-top: -5vw;
+}
+
+/*LYSERRØD BOKS*/
+.pink-img1 {
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .pink-img2 {
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+  }
+
+.pink-container {
+    display: grid;
+    background-color: var(--pink);
+    margin-top: -4em;
+    margin-bottom: -4em;
+  }
+
+  .hvid_box {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    background-color: white;
+    color:var(--green);
+    padding: 2.5em;
+    padding-bottom: 1em;
+    transform: rotate(2deg);
+    /* width: fit-content; */
+    margin: 2.5em;
+    box-shadow: 0em 0.2em 0.4em var(--shadow);
+}
+
+.button, .gron_knap{
+color: var(--green);
+}
+
+.gron_box {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    background-color:var(--green);
+    color:white;
+    padding: 2.5em;
+    padding-bottom: 1em;
+    transform: rotate(-1.5deg);
+    /* width: fit-content; */
+    margin: 2.5em;
+    box-shadow: 0em 0.2em 0.4em var(--shadow);
+}
+
+.tape1 {
+    /* grid-column: 1;
+    grid-row: 1; */
+    transform: rotate(100deg);
+    width: 50px;
+    height: 64px;
+    margin-left: -19%;
+    margin-top: -20%;
+    position: absolute;
+  }
+
+  .tape2 {
+    transform: rotate(0deg);
+    width: 50px;
+    height: 64px;
+    margin-left: 76%;
+    margin-top: -20%;
+    position: absolute;
+  }
+.tape3 {
+    transform: rotate(102deg);
+    width: 50px;
+    height: 64px;
+    margin-left: -17%;
+    margin-top: -20%;
+    position: absolute;
+  }
+
+  .tape4 {
+    transform: rotate(-2deg);
+    width: 50px;
+    height: 64px;
+    margin-left: 76%;
+    margin-top: -20%;
+    position: absolute;
+  }
+
+
+
+
+
+
+
+
+
+
+
+.forsidebillede3 {
+    width: 100%;
+    height: auto;
+}
+.forsidebillede4 {
+    width: 100%;
+    height: auto;
+}
+
+
+.forside_p{
+margin-left: 10vw;
+margin-right: 10vw;
+margin-top: 3vw;
+margin-bottom: 8vw;
+}
+
+
+.video {
+    width: 100%; /* Gør videoen responsiv og fylder sin container */
+    max-width: 800px; /* Sæt en maksimal bredde for videoen */
+    height: auto; /* Behold den originale højde-bredde-forhold */
+}
+
+
+/***lyserød forside box */
+
+.forside_box_container{
+display: flex;
+flex-direction: row;
+position: absolute;
+}
+
+
+
+
+
+
+.gron_box {
+    /* position: absolute; */
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+    width: auto;
+    background:var(--green);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    /* padding-top: 4rem;
+    padding-bottom: 2rem; */
+}
+.lort{
+    font-size: 400px;
+}
+
+
+/*DESKTOP VERSION*/
+@media (min-width: 769px){
+
+    .forsidebillede {
+        object-position: 17% top;
+}
+
+    /* FORSIDE BILLEDE LAYOUT*/
+    .forsidebillede_container{
+    height: 90vh; /* Full viewport height mobile */
+}
+.tekst-overlay {
+    margin-top: 20vw;
+}
+
+.forsidebillede2 {
+    height: 60vw;
+}
+
+.video {
+    position: absolute;
+    top: 220%;
+    left: 8%;
+    border: 5px solid  var(--pink); /* Tilføjer en sort kant på 5px */
+}
+
+.pink-img1 {
+    height: 25vw;
+    margin-top: 6em;
+  }
+.pink-img2 {
+    height: 25vw;
+  }
+
+  .hvid_box {
+    grid-column: 1;
+    grid-row: 1;
+}
+  .gron_box {
+    grid-column: 2;
+    grid-row: 1;
+}
+.tape1 {
+    margin-left: -12%;
+    margin-top: -13%;
+  }
+
+  .tape2 {
+    margin-left: 85%;
+    margin-top: -13%;
+  }
+.tape3 {
+    margin-left: -11%;
+    margin-top: -13%;
+  }
+
+  .tape4 {
+    margin-left: 85%;
+    margin-top: -13%;
+  }
+}
+</style>
