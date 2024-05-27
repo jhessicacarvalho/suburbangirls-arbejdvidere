@@ -1,0 +1,88 @@
+<footer class="footer">
+  <div class="footer-left">
+    <p>KONTAKT</p>
+    <p>ANSØG</p>
+  </div>
+  <div class="footer-center">
+    <img src="/svger/logo.svg" alt="Logo" />
+  </div>
+  <div class="footer-right">
+    <img src="/svger/facebook.svg" alt="Facebook" />
+    <img src="/svger/instagram.svg" alt="Instagram" />
+    <img src="/svger/youtube.svg" alt="Youtube" />
+  </div>
+</footer>
+
+<style>
+  @font-face {
+    font-family: Amiko-Regular;
+    src: url(/fonts/Amiko-Regular);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @media (max-width: 769px){
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    background-color: #fffffe;
+    bottom: 0;
+    left: 0;
+    padding-right: 3em;
+    padding-left: 3em;
+    margin-top: 5rem;
+  }
+
+
+  .footer-left p {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .footer-center img {
+    width: 50px;
+    height: auto;
+  }
+
+  .footer-right img {
+    height: 22px;
+    /* margin-right: 10px; */
+  }
+  }
+
+  @media (min-width: 769px) {
+    .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3em;
+    background-color: #fffffe;
+    bottom: 0;
+    left: 0;
+    padding-right: 10em;
+    padding-left: 10em;
+    margin-top: auto;
+  }
+
+  .footer-left p {
+    margin: 0;
+  }
+
+  .footer-center img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-right img {
+    height: 80px;
+    margin-left: 2em;
+  }
+  }
+
+</style>
