@@ -1,0 +1,150 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
+
+<div class="mentor-setup">
+  <div class="billede">
+    <figure>
+      <img src={`/mentor/${data.img}`} alt="mentor" />
+      <span>
+        <h1>{data.name}</h1>
+        <p>{data.rolle}</p>
+      </span>
+      <img class="pin pin-top-left" src="/svger/nypin.svg" alt="pin" />
+      <img class="pin pin-bottom-right" src="/svger/nypin.svg" alt="pin" />
+    </figure>
+  </div>
+  <div class="bio">
+    <img src="/svger/nypin.svg" alt="pin" class="pin" />
+    <div class="bioboks">
+      <p>{data.bio}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  /*--------------- Billede testen ---------------*/
+
+  figure {
+    width: 244px;
+    height: 292px;
+    position: relative;
+    background-color: #ffffff;
+    padding: 64px 19px 55px 19px;
+    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.42);
+    rotate: 0deg;
+
+    /* Tilføj disse regler for at centrere figuren */
+    margin: 0 auto; /* Centrer vandret */
+    margin-top: 30px;
+    display: flex; /* Brug flexbox */
+    flex-direction: column; /* Stak elementerne lodret */
+    justify-content: center; /* Centrer indholdet lodret */
+    align-items: center; /* Centrer indholdet vandret */
+  }
+  figure img {
+    width: 100%;
+  }
+  span {
+    font-size: 25px;
+    text-align: center;
+    color: #2c2c2c;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+  }
+  figure .pin {
+    position: absolute;
+    width: 20%; /* Adjust size as needed */
+    height: 38%; /* Adjust size as needed */
+  }
+
+  .pin-top-left {
+    top: -55px;
+    left: -19px;
+    transform: rotate(2deg);
+  }
+
+  .pin-bottom-right {
+    top: -57px;
+    right: -23px;
+    transform: rotate(78deg);
+  }
+
+  /*--------------- MOBIL-VERSION ---------------*/
+  .mentor-setup {
+    display: grid;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+  .billede {
+    display: grid;
+    justify-items: center;
+    padding-bottom: 2rem;
+  }
+  .bio {
+    display: grid;
+    justify-items: center;
+  }
+
+  img {
+    width: 15rem;
+  }
+
+  .pin {
+    justify-self: center;
+    z-index: 1;
+    position: absolute;
+    width: 1.5rem;
+  }
+  .bioboks {
+    padding: 4rem 1rem 0rem 1rem;
+    width: 22rem;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+  }
+  .billedebg {
+    padding: 1rem 1rem 0rem 1rem;
+    width: 17rem;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    /* Jeg har nestet, så det kun er denne p (inde i den section) der bliver ramt. I stedet for class*/
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .pin-img {
+    width: 100%;
+    margin-top: -5%;
+    margin-inline-start: 94%;
+  }
+
+  /*--------------- WEB-VERSION ---------------*/
+  @media (min-width: 769px) {
+    .mentor-setup {
+      grid-template-columns: 1fr 1fr;je
+    }
+    .bioboks {
+      padding-right: 2rem;
+      padding-left: 2rem;
+      width: 32rem;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      position: relative;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+    }
+    .bio {
+      display: grid;
+      justify-content: center;
+    }
+  }
+</style>

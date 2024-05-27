@@ -1,0 +1,177 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import "../styles/general.css";
+import Mentor from "../components/Mentor.astro";
+---
+
+<MainLayout>
+  <h1>Mød os</h1>
+  <div class="container">
+    <div class="box box1">
+      <p>
+        SUBURBANGIRLS blev oprettet i 2019 af Karen Mukupa, Jesper Livid og
+        Marianne Fruergaard som et talentudviklingsprojekt under navnet Urban
+        Grrls. I 2024 skiftede projektet navn til SUBURBANGIRLS for at afspejle
+        det voksende netværk og fællesskab.
+      </p>
+      <p>
+        SUBURBANGIRLS blev etableret som et samarbejde mellem flere kommuner
+        uden for København, for at sætte fokus på talentfulde unge kvinder i de
+        urbane områder.
+      </p>
+    </div>
+    <div class="box box2">
+      <h2>Mission</h2>
+      <p>
+        Vores mission at skabe et stærkt netværk for unge kvinder i
+        musikbranchen. Vi ønsker at bryde med gamle normer og opmuntre kvinder
+        til at være sig selv og stikke ud.
+      </p>
+      <h2>Vision</h2>
+      <p>
+        Vores vision er at få flere kvinder ind i musikbranchen og skabe en
+        rigere og mere mangfoldig musikscene i Danmark.
+      </p>
+    </div>
+  </div>
+  <Mentor />
+  <img
+    class="pink-img"
+    src="../paper-texture_pink_01.gif"
+    alt="pink papir der er revet over"
+  />
+  <div class="pink-container2">
+    <div class="container_img">
+      <div class="box box_img">
+        <p>TV2 KOSMOPOL FULGTE I 2022 SUBURBANGIRLS</p>
+        <a href="https://www.tv2kosmopol.dk/urban-grrls" class="knap">SE HER</a>
+      </div>
+      <img
+        class="dokumentar_billede"
+        src="/mentor/dokumentar.webp"
+        alt="Screenshot af dokumentar"
+      />
+    </div>
+  </div>
+  <!-- <Samarbejds /> -->
+</MainLayout>
+
+<style>
+  /* Mobilversion */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .box {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    background-color: #fffffe;
+  }
+
+  .pink-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .pink-container2 {
+    background-color: var(--pink);
+    margin-top: -1em;
+  }
+
+  .container_img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .box_img {
+    background-color: #ffffff;
+    border: 2px solid var(--green);
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow);
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .box_img p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: var(--green);
+  }
+
+  .box_img .knap {
+    border: 2px solid var(--green);
+    background-color: #ffffff;
+    color: var(--green);
+    padding: 5px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .dokumentar_billede {
+    width: 100%; /* Gør billedet 100% af containerens bredde */
+    height: auto; /* Bevar billedets aspektforhold */
+    max-width: 336px; /* Begræns den maksimale bredde til 300px */
+  }
+
+  /* Webversion */
+  @media (min-width: 769px) {
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    .box {
+      width: calc(50% - 10px);
+      background-color: #f0f0f0;
+    }
+
+    .pink-container2 {
+      position: relative;
+      padding: 20px; /* Tilføj lidt padding omkring containeren, hvis nødvendigt */
+    }
+
+    .container_img {
+      position: relative;
+      display: flex;
+      justify-content: center; /* Centrerer billedet horisontalt */
+      align-items: center; /* Centrerer billedet vertikalt */
+    }
+
+    .dokumentar_billede {
+      width: 100%; /* Juster bredde som nødvendigt, f.eks. 80% af containerens bredde */
+      max-width: 1000px; /* Sæt en max bredde for at undgå at billedet bliver for stort */
+      height: auto; /* Bevarer billedets aspect ratio */
+      display: block;
+    }
+
+    .box_img {
+      position: absolute;
+      top: 11%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      width: 66%;
+      height: 48%;
+
+      text-align: center;
+    }
+  }
+</style>
