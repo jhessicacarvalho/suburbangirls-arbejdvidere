@@ -1,0 +1,61 @@
+---
+const header = Astro.props.header;
+---
+
+<div class="post-it-green">
+    <img class="tape tape1" src="../svger/tape.svg" alt="tape">
+    <img class="tape tape2" src="../svger/tape.svg" alt="tape">
+    <h2>{header}</h2>
+        <slot></slot>
+</div>
+
+<style is:global>
+.post-it-green {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--green);
+    color: white;
+    padding: 2rem;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    max-width: 80%;
+    box-shadow: 0rem 0.4rem 5px var(--shadow);
+}
+
+.tape {
+    position: absolute;
+    width: 20%;
+    height: auto;
+}
+
+.tape1 {
+    top: -1rem;
+    left: -1.5rem;
+    transform: rotate(100deg);
+}
+
+.tape2 {
+    top: -1em;
+    right: -1.5rem;
+}
+
+@media (min-width: 769px) {
+    .post-it-green{
+        padding:5rem;
+        transform: rotate(5deg);
+    }
+
+    .tape1{
+        top: -4rem;
+        left: -3rem;
+    }
+
+    .tape2 {
+    top: -3.5em;
+    right: -3.5rem;
+}
+}
+</style>
+
