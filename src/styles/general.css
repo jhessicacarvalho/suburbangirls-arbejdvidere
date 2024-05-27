@@ -28,7 +28,7 @@ body {
 
 @font-face {
   font-family: mostWasted;
-  src: url(/fonts/mostwasted.woff2);
+  src: url(../fonts/mostwasted.woff2);
 }
 
 @media (max-width: 768px) {
