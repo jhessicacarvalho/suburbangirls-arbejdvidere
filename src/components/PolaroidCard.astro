@@ -1,0 +1,103 @@
+---
+const { text } = Astro.props;
+---
+
+<figure>
+  <slot />
+  <figcaption>{text}</figcaption>
+  <img class="tape tape-top-left" src="./polaroid/lille_tape.webp" alt="" />
+  <img class="tape tape-bottom-right" src="./polaroid/lille_tape.webp" alt="" />
+</figure>
+
+<style>
+  figure {
+    width: 245px;
+    height: 315px;
+    position: relative;
+    background-color: #ffffff;
+    padding: 19px 10px 88px 9px;
+    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.42);
+    rotate: 10deg;
+
+    /* Tilføj disse regler for at centrere figuren */
+    margin: 0 auto; /* Centrer vandret */
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: flex; /* Brug flexbox */
+    flex-direction: column; /* Stak elementerne lodret */
+    justify-content: center; /* Centrer indholdet lodret */
+    align-items: center; /* Centrer indholdet vandret */
+  }
+  figure img {
+    width: 100%;
+  }
+  figcaption {
+    font-size: 25px;
+    text-align: center;
+    color: #2c2c2c;
+  }
+  figure .tape {
+    position: absolute;
+    width: 13%; /* Adjust size as needed */
+    height: 36%; /* Adjust size as needed */
+  }
+
+  .tape-top-left {
+    top: -39px;
+    left: 5px;
+    transform: rotate(40deg);
+  }
+
+  .tape-bottom-right {
+    bottom: -35px;
+    right: -1px;
+    transform: rotate(40deg);
+  }
+
+  @media (min-width: 700px;) {
+    figure {
+      width: 336px;
+      height: 390px;
+      position: relative;
+      background-color: #ffffff;
+      padding: 19px 19px 55px 19px;
+      box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.42);
+      rotate: 10deg;
+
+      /* Tilføj disse regler for at centrere figuren */
+      margin: 0 auto; /* Centrer vandret */
+      margin-top: 30px;
+      display: flex; /* Brug flexbox */
+      flex-direction: column; /* Stak elementerne lodret */
+      justify-content: center; /* Centrer indholdet lodret */
+      align-items: center; /* Centrer indholdet vandret */
+    }
+
+    figure img {
+      width: 100%;
+    }
+    figcaption {
+      font-size: 25px;
+      text-align: center;
+      color: black;
+      font-family: Amiko-Regular;
+    }
+    figure .tape {
+      position: absolute;
+      width: 13%; /* Adjust size as needed */
+      height: 36%; /* Adjust size as needed */
+    }
+
+    .tape-top-left {
+      top: -39px;
+      left: 5px;
+      transform: rotate(40deg);
+    }
+
+    .tape-bottom-right {
+      bottom: -35px;
+      right: -1px;
+      transform: rotate(40deg);
+    }
+  }
+</style>
