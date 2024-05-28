@@ -13,10 +13,11 @@ import Button from "../components/Button.astro";
         <div class="tekst-overlay">
          <h2>KICKSTART DIN KARRIERE</h2>
     <p class="forside_pb">MED VORES TALENTFORLØB</p>
-    <a href="/ansog">
-    <Button color="pink" opacity="hvidbaggrund" class="pink_button">ANSØG NU</Button>
-    <Button opacity="hvidbaggrund" class="hvid_button">ANSØG NU</Button>
-  </a>
+    <a href="/ansog" class="pink_button">
+    <Button color="pink" opacity="hvidbaggrund" >ANSØG NU</Button>
+    </a>
+    <a href="/ansog" class="hvid_button">
+      <Button opacity="hvidbaggrund" >ANSØG NU</Button> </a>
         </div>
 </div>
 
@@ -272,11 +273,20 @@ position: absolute;
     padding-bottom: 2rem; */
 }
 
+.hvid_button{
+  display: block;
+}
+.pink_button{
+  display: none;
+}
 /*DESKTOP VERSION*/
 @media (min-width: 769px){
 
-.pink_button{
+  .hvid_button{
   display: none;
+}
+.pink_button{
+  display: block;
 }
     .forsidebillede {
         /* object-position: 17% top; */
