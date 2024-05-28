@@ -2,33 +2,36 @@
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/general.css";
 import Mentor from "../components/Mentor.astro";
+import Samarbejds from "../components/Samarbejds.astro";
 ---
 
 <MainLayout>
-  <h1>Mød os</h1>
+  <img class="modos" src="/modos.webp" alt="Billeder af mentor" />
+
   <div class="container">
     <div class="box box1">
-      <p>
+      <h1 class="overskrift">Mød os</h1>
+      <p class="paragraf">
         SUBURBANGIRLS blev oprettet i 2019 af Karen Mukupa, Jesper Livid og
         Marianne Fruergaard som et talentudviklingsprojekt under navnet Urban
         Grrls. I 2024 skiftede projektet navn til SUBURBANGIRLS for at afspejle
         det voksende netværk og fællesskab.
       </p>
-      <p>
+      <p class="paragraf">
         SUBURBANGIRLS blev etableret som et samarbejde mellem flere kommuner
         uden for København, for at sætte fokus på talentfulde unge kvinder i de
         urbane områder.
       </p>
     </div>
     <div class="box box2">
-      <h2>Mission</h2>
-      <p>
+      <h2 class="overskrift2">Mission</h2>
+      <p class="paragraf">
         Vores mission at skabe et stærkt netværk for unge kvinder i
         musikbranchen. Vi ønsker at bryde med gamle normer og opmuntre kvinder
         til at være sig selv og stikke ud.
       </p>
-      <h2>Vision</h2>
-      <p>
+      <h2 class="overskrift2">Vision</h2>
+      <p class="paragraf">
         Vores vision er at få flere kvinder ind i musikbranchen og skabe en
         rigere og mere mangfoldig musikscene i Danmark.
       </p>
@@ -36,7 +39,7 @@ import Mentor from "../components/Mentor.astro";
   </div>
   <Mentor />
   <img
-    class="pink-img"
+    class="pink-img1"
     src="../paper-texture_pink_01.gif"
     alt="pink papir der er revet over"
   />
@@ -53,11 +56,17 @@ import Mentor from "../components/Mentor.astro";
       />
     </div>
   </div>
-  <!-- <Samarbejds /> -->
+  <img
+    class="pink-img2"
+    src="../paper-texture_pink_03.gif"
+    alt="pink papir der er revet over"
+  />
+  <Samarbejds />
 </MainLayout>
 
 <style>
   /* Mobilversion */
+
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -72,11 +81,15 @@ import Mentor from "../components/Mentor.astro";
     background-color: #fffffe;
   }
 
-  .pink-img {
+  .pink-img1 {
     width: 100%;
     height: auto;
   }
 
+  .modos {
+    width: 100%;
+    height: auto;
+  }
   .pink-container2 {
     background-color: var(--pink);
     margin-top: -1em;
@@ -126,6 +139,10 @@ import Mentor from "../components/Mentor.astro";
     height: auto; /* Bevar billedets aspektforhold */
     max-width: 336px; /* Begræns den maksimale bredde til 300px */
   }
+  .pink-img2 {
+    width: 100%;
+    height: auto;
+  }
 
   /* Webversion */
   @media (min-width: 769px) {
@@ -136,8 +153,17 @@ import Mentor from "../components/Mentor.astro";
     }
 
     .box {
-      width: calc(50% - 10px);
+      width: calc(50% - 1px);
       background-color: #f0f0f0;
+      padding: 54px;
+    }
+
+    .box1 {
+      padding-top: 41px;
+    }
+
+    .box2 {
+      padding-top: 40px;
     }
 
     .pink-container2 {
@@ -172,6 +198,25 @@ import Mentor from "../components/Mentor.astro";
       height: 48%;
 
       text-align: center;
+    }
+    .overskrift {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .overskrift2 {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .paragraf {
+      font-size: 1em;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+      font-weight: normal;
+    }
+    .pink-img2 {
+      width: 100%;
+      height: auto;
     }
   }
 </style>
