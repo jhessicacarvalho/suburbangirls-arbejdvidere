@@ -7,25 +7,28 @@ import Button from "../components/Button.astro";
 
 <MainLayout>
 <div class="forsidebillede_container">
-        <img src="/forside.jpg" alt="forside billede" class="forsidebillede">
+        <img src="/forside.webp" alt="forside billede" class="forsidebillede">
         <h1 class="forside_overskrift">SUBURBANGIRLS</h1>
         <h1 class="forside_overskrift_skygge">SUBURBANGIRLS</h1>
         <div class="tekst-overlay">
          <h2>KICKSTART DIN KARRIERE</h2>
     <p class="forside_pb">MED VORES TALENTFORLØB</p>
-    <Button text="ANSØG NU"/>
+    <a href="/ansog">
+    <Button color="pink" opacity="hvidbaggrund" class="pink_button">ANSØG NU</Button>
+    <Button opacity="hvidbaggrund" class="hvid_button">ANSØG NU</Button>
+  </a>
         </div>
 </div>
 
     <div class="logo_container">
     <img class="logo" src="/svger/logo.svg" alt="logo" /></div>
     <p class="forside_p">SUBURBANGIRLS er et musikfællesskab, hvor du kan udvikle dine færdigheder og få indsigt i musikbranchen gennem møder med erfarne sangskrivere, producere og kunstnere. Her får du professionel vejledning og karriererådgivning fra brancheeksperter, samt muligheden for at opbygge et stærkt netværk af ligesindede kunstnere. SUBURBANGIRLS vil gerne ændre kønsbalancen i musikbranchen.</p>
+    <div class="desktop_grid">
     <img class="forsidebillede2" src="/ubg.webp" alt="billede af sub" />
-
     <video controls class="video">
         <source src="/promovideo.mp4" type="video/mp4">
     </video>
-
+  </div>
 
     <img class="pink-img1" src="../paper-texture_pink_01.gif" alt="pink papir der er revet over" >    
    
@@ -38,7 +41,9 @@ import Button from "../components/Button.astro";
     <img class="tape2" src="../svger/tape.svg" alt="tape">
             <h2>ANSØGNINGSFRIST</h2>
             <p>30. NOVEMBER 2023</p>
-            <Button text="ANSØG NU" class="gron_knap"/>
+            <a href="/ansog">
+              <Button color="green">ANSØG NU</Button>
+            </a>
     </div>
     
 
@@ -48,7 +53,7 @@ import Button from "../components/Button.astro";
         <img class="tape4" src="../svger/tape.svg" alt="tape">
             <h2>INFO-EVENT ONLINE</h2>
             <p>21. NOVEMBER KL. 19.00</p>
-            <Button text="LINK"/>
+            <a href="/ansog"><Button>LINK</Button></a>
         </div>
         
 
@@ -107,10 +112,8 @@ import Button from "../components/Button.astro";
     margin-top: 28vw;
     margin-left: 6vw;
 }
-.tekst-overlay h2{
-    font-size: 4vw;
-    margin-bottom: -1vw;
-    color: white;
+h2{
+    margin-bottom: 0vw;
 }
 
 .forside_pb{
@@ -118,20 +121,6 @@ import Button from "../components/Button.astro";
 }
 
 /********************************* */
-
-/*KNAP*/
-.button{
-    border: solid;
-    border-width: medium;
-    border-radius: 10px;
-    color: white;
-    background-color: rgb(0 0 0 / 30%);
-    transition: background-color 0.3s, color 0.3s;
-    padding: 1.5vw 3vw;
-    font-size: 16px;
-    cursor: pointer;
-    border-width: 0.8vw; /* Justér kantens tykkelse*/
-}
 
 /*****LOGO */
 .logo_container{
@@ -187,11 +176,8 @@ margin-bottom: 4vw;
     transform: rotate(2deg);
     /* width: fit-content; */
     margin: 2.5em;
+    padding-bottom: 2em;
     box-shadow: 0em 0.2em 0.4em var(--shadow);
-}
-
-.button, .gron_knap{
-color: var(--green);
 }
 
 .gron_box {
@@ -201,7 +187,7 @@ color: var(--green);
     background-color:var(--green);
     color:white;
     padding: 2.5em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     transform: rotate(-1.5deg);
     /* width: fit-content; */
     margin: 2.5em;
@@ -245,16 +231,6 @@ color: var(--green);
     position: absolute;
   }
 
-
-
-
-
-
-
-
-
-
-
 .forsidebillede3 {
     width: 100%;
     height: auto;
@@ -263,8 +239,6 @@ color: var(--green);
     width: 100%;
     height: auto;
 }
-
-
 .forside_p{
 margin-left: 10vw;
 margin-right: 10vw;
@@ -273,26 +247,20 @@ margin-bottom: 8vw;
 }
 
 
-.video {
+  .video {
     width: 100%; /* Gør videoen responsiv og fylder sin container */
     max-width: 800px; /* Sæt en maksimal bredde for videoen */
     height: auto; /* Behold den originale højde-bredde-forhold */
 }
 
 
-/***lyserød forside box */
 
+/***lyserød forside box */
 .forside_box_container{
 display: flex;
 flex-direction: row;
 position: absolute;
 }
-
-
-
-
-
-
 .gron_box {
     /* position: absolute; */
     /* padding-right: 2rem;
@@ -303,43 +271,66 @@ position: absolute;
     /* padding-top: 4rem;
     padding-bottom: 2rem; */
 }
-.lort{
-    font-size: 400px;
-}
-
 
 /*DESKTOP VERSION*/
 @media (min-width: 769px){
 
+.pink_button{
+  display: none;
+}
     .forsidebillede {
-        object-position: 17% top;
+        /* object-position: 17% top; */
+        width: 70%;
 }
 
     /* FORSIDE BILLEDE LAYOUT*/
     .forsidebillede_container{
     height: 90vh; /* Full viewport height mobile */
 }
+
 .tekst-overlay {
-    margin-top: 20vw;
+    margin-top: 15vw;
+    justify-self: right;
+    align-self: center;
+    color:var(--pink);
+    text-align: center;
+    margin-right: 30%;
+}
+
+.tekst-overlay h2{
+  font-size: 2.5em;
+  color: var(--pink);
 }
 
 .forsidebillede2 {
     height: 60vw;
+    grid-column: 1;
+    grid-row: 1;
 }
-
 .video {
-    position: absolute;
-    top: 220%;
-    left: 8%;
+  grid-column: 1;
+    grid-row: 1;
+    margin-top: 28%;
+    margin-left: 7%;
     border: 5px solid  var(--pink); /* Tilføjer en sort kant på 5px */
+}
+.desktop_grid{
+  display: grid;
 }
 
 .pink-img1 {
     height: 25vw;
-    margin-top: 6em;
+    margin-top: 5em;
   }
 .pink-img2 {
     height: 25vw;
+  }
+
+  .pink-container {
+    display: grid;
+    background-color: var(--pink);
+    margin-top: -8em;
+    margin-bottom: -6em;
   }
 
   .hvid_box {
@@ -369,4 +360,16 @@ position: absolute;
     margin-top: -13%;
   }
 }
+@media (max-width: 1150px){
+  .hvid_box {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.gron_box {
+    grid-column: 1;
+    grid-row: 2;
+}
+}
+
 </style>

@@ -10,21 +10,21 @@ import Button from "../components/Button.astro";
   <h2>Vil du være med i SUBURBANGIRLS 2024?</h2>
 <p><strong>SÅDAN SØGER DU</strong><br>For at ansøge om at være en del af det nye SUBURBANGIRLS hold skal du udfylde det vedhæftede ansøgningsskema, som du finder længere nede ved “Ansøg nu”, hvor du hvor du fortæller lidt om dig selv og om dit liv med musik.</p>
 <p>Når du har sendt din ansøgning vil du modtage en ‘Tak for din ansøgning’ mail retur. Får du ikke den, så er det ikke sikkert vi har modtaget din ansøgning.</p>
-<p>Har du spørgsmål eller ønsker mere information. Skriv på projektets mail: suburbangirlsdk@gmail.com</p>
 </div>
 
 <div class="grid_container">
 <img class="forsidebillede2" src="/ubg.webp" alt="billede af sub" />
 
   <div class="ansog_tekst_box">
-    <div class="logo_container">
-    <p class="deadline">DEADLINE D. 30.11.24</p>
-    <p>Kickstart din karriere!</p>
-    <Button text="ANSØG NU"/>
-  </div>
+    <h2 class="deadline">ANSØGNINGSFRIST<br>D. 30.11.24</h2>
+    <p class="kickstart">Kickstart din karriere nu!</p>
+    <a href="https://docs.google.com/forms/d/1aT5OMMFyhVFeyxX2CWQICQA-FcZ2hhjhwoQ7THOj-IM/viewform?edit_requested=true">
+        <Button color="pink" opacity="sortbaggrund"><strong>ANSØG NU</strong></Button>
+      </a>
 </div>
 <img class="logo" src="/svger/logo.svg" alt="logo" />
 </div>
+<p class="spørgsmål">Har du spørgsmål eller ønsker mere information. <br>Skriv på projektets mail: suburbangirlsdk@gmail.com</p>
 </MainLayout>
 <style>
     .ansog_billede{
@@ -59,12 +59,16 @@ import Button from "../components/Button.astro";
     grid-row: 1;
     z-index: 1;
     margin-top: 12%;
-    margin-left: 3%;
+    margin-left: 5%;
 }
 
 .deadline{
-  margin-bottom: -2%;
+  margin-bottom: 0;
     color: var(--pink);
+}
+.kickstart{
+color: var(--pink);
+margin-bottom: 1%;
 }
 
 .logo{
@@ -76,5 +80,29 @@ import Button from "../components/Button.astro";
     margin-top: 17%;
     width: 22%;
 }
+.spørgsmål{
+margin-left: 5%;
+font-size: 0.7em;
+margin-top: -2%;
+}
+@media (min-width: 769px){
+    .tekst_container{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 6%;
+  }
+    .ansog_tekst_box{
+    margin-top: 12%;
+    margin-left: 10%;
+}
+.spørgsmål{
+margin-left: 10%;
+font-size: 1.2em;
+margin-top: -5%;
+margin-bottom: 5%;
+}
+
+}
+
 
 </style>
