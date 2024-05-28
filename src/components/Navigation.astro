@@ -30,7 +30,7 @@
 
   .navigation {
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     display: flex;
     z-index: 10;
@@ -61,6 +61,10 @@
     font-family: "Amiko-Regular", sans-serif;
     color: black;
     font-size: 17px;
+  }
+
+  .nav-links a:hover {
+    color:var(--pink); /* Change this to the color you want on hover */
   }
 
   .burger-menu {
