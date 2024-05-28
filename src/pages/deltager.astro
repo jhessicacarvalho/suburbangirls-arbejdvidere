@@ -1,17 +1,29 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/general.css";
+import PolaroidCard from "../components/PolaroidCard.astro";
+import GalleriDeltager from "../components/GalleriDeltager.astro";
+import DeltagerBTN from "../components/DeltagerBTN.astro";
+
 ---
 
 <MainLayout>
   <img
     class="forside_img"
-    src="public/deltager/deltager_forside1.webp"
-    alt=""
+    src="./deltager/deltager_forside1.webp"
+    alt="Forsidebillede med alle deltagerne i forløbet"
   />
   <h1 style="margin-left: 1.4em">Deltagerne 2023</h1>
   <section class="top_grid margin">
-    <figure>
+    <article>
+<PolaroidCard><img class="polaroid_img" src="./polaroid/fællesbillede3.webp" alt="Fællesbillede"></PolaroidCard>
+    </article>
+   
+    <!-- <PolaroidCard
+      imagePath="/src/polaroid/fællesbillede3.webp"
+      altText="Another image description."
+    /> -->
+    <!-- <figure>
       <img src="public/deltager/Fællesbillede_2.webp" alt="my_photo" />
       <figcaption>2023</figcaption>
       <img
@@ -24,7 +36,7 @@ import "../styles/general.css";
         src="public/deltager/lille_tape.webp"
         alt=""
       />
-    </figure>
+    </figure> -->
     <div>
       <iframe
         style="border-radius: 12px"
@@ -35,170 +47,20 @@ import "../styles/general.css";
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-      <div class="button-container">
-        <button class="button" id="button"
-          >Se deltagerne <span class="caret"></span>
-        </button>
-      </div>
+<DeltagerBTN />
+   
     </div>
   </section>
-
-  <section class="grid1 forsvind">
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_1.webp" alt="" />
-      <div class="content fade">
-        <h2>Lili</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_2.webp" alt="" />
-      <div class="content fade">
-        <h2>Marie</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_3.webp" alt="" />
-      <div class="content fade">
-        <h2>Anna</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_4.webp" alt="" />
-      <div class="content fade">
-        <h2>Donita Rose</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_5.webp" alt="" />
-      <div class="content fade">
-        <h2>Sofia</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_6.webp" alt="" />
-      <div class="content fade">
-        <h2>Luna</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_7.webp" alt="" />
-      <div class="content fade">
-        <h2>Kathrine</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_8.webp" alt="" />
-      <div class="content fade">
-        <h2>Vanilla</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_9.webp" alt="" />
-      <div class="content fade">
-        <h2>Molly</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_10.webp" alt="" />
-      <div class="content fade">
-        <h2>Ingrid</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_11.webp" alt="" />
-      <div class="content fade">
-        <h2>Sophie</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_4.webp" alt="" />
-      <div class="content fade">
-        <h2>Iris</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_2.webp" alt="" />
-      <div class="content fade">
-        <h2>Merle</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_6.webp" alt="" />
-      <div class="content fade">
-        <h2>Bjørk</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_5.webp" alt="" />
-      <div class="content fade">
-        <h2>Lulu</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-  </section>
-  <img style="width: 100%;" src="public/paper-texture_pink_01.gif" alt="" />
+<GalleriDeltager/>
+ 
+  <img style="width: 100%;" src="./paper-texture_pink_01.gif" alt="pink overrevet papir" />
 
   <div id="pink_baggrund">
     <h1 style="margin-left: 1.4em">Deltagerne 2022</h1>
     <section class="top_grid margin">
-      <figure>
-        <img src="public/deltager/fællesbillede3.webp" alt="my_photo" />
-        <figcaption>2022</figcaption>
-        <img
-          class="tape tape-top-left"
-          src="public/deltager/lille_tape.webp"
-          alt=""
-        />
-        <img
-          class="tape tape-bottom-right"
-          src="public/deltager/lille_tape.webp"
-          alt=""
-        />
-      </figure>
+        <article>
+            <PolaroidCard><img class="polaroid_img" src="./polaroid/Fællesbillede_2.webp" alt="Fællesbillede"></PolaroidCard>
+                </article>
       <div>
         <iframe
           style="border-radius: 12px"
@@ -209,170 +71,19 @@ import "../styles/general.css";
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"></iframe>
-        <div class="button-container">
-          <button class="button" id="button2"
-            >Se deltagerne <span class="caret"></span>
-          </button>
-        </div>
+          <DeltagerBTN id="button2"/>
       </div>
     </section>
-
-    <section class="grid1 forsvind">
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_1.webp" alt="" />
-        <div class="content fade">
-          <h2>Lili</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_2.webp" alt="" />
-        <div class="content fade">
-          <h2>Marie</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_3.webp" alt="" />
-        <div class="content fade">
-          <h2>Anna</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_4.webp" alt="" />
-        <div class="content fade">
-          <h2>Donita Rose</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_5.webp" alt="" />
-        <div class="content fade">
-          <h2>Sofia</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_6.webp" alt="" />
-        <div class="content fade">
-          <h2>Luna</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_7.webp" alt="" />
-        <div class="content fade">
-          <h2>Kathrine</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_8.webp" alt="" />
-        <div class="content fade">
-          <h2>Vanilla</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_9.webp" alt="" />
-        <div class="content fade">
-          <h2>Molly</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_10.webp" alt="" />
-        <div class="content fade">
-          <h2>Ingrid</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_11.webp" alt="" />
-        <div class="content fade">
-          <h2>Sophie</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_4.webp" alt="" />
-        <div class="content fade">
-          <h2>Iris</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_2.webp" alt="" />
-        <div class="content fade">
-          <h2>Merle</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_6.webp" alt="" />
-        <div class="content fade">
-          <h2>Bjørk</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-      <div class="image_wrapper">
-        <img src="public/deltager/delt_5.webp" alt="" />
-        <div class="content fade">
-          <h2>Lulu</h2>
-          <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-            ><img src="public/svger/instagram.svg" alt="" /></a
-          >
-        </div>
-      </div>
-    </section>
+    <GalleriDeltager />
+   
   </div>
-  <img class="last_torn_paper" src="public/paper-texture_pink_03.gif" alt="" />
+  <img class="last_torn_paper" src="./paper-texture_pink_03.gif" alt="" />
 
   <h1 class="nederst_h1">Deltagerne 2021</h1>
   <section class="top_grid margin">
-    <figure>
-      <img src="public/deltager/Fællesbillede_2.webp" alt="my_photo" />
-      <figcaption>2021</figcaption>
-      <img
-        class="tape tape-top-left"
-        src="public/deltager/lille_tape.webp"
-        alt=""
-      />
-      <img
-        class="tape tape-bottom-right"
-        src="public/deltager/lille_tape.webp"
-        alt=""
-      />
-    </figure>
+    <article>
+        <PolaroidCard text="hejsa"><img class="polaroid_img" src="./polaroid/sub_convert.webp" alt="Fællesbillede"></PolaroidCard>
+            </article>
     <div>
       <iframe
         style="border-radius: 12px"
@@ -390,150 +101,15 @@ import "../styles/general.css";
       </div>
     </div>
   </section>
-
-  <section class="grid1 forsvind">
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_1.webp" alt="" />
-      <div class="content fade">
-        <h2>Lili</h2>
-        <a href=""
-          >https://www.instagram.com/suburbangirlsdk/?locale=en_US<img
-            src="public/svger/instagram.svg"
-            alt=""
-          /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_2.webp" alt="" />
-      <div class="content fade">
-        <h2>Marie</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_3.webp" alt="" />
-      <div class="content fade">
-        <h2>Anna</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_4.webp" alt="" />
-      <div class="content fade">
-        <h2>Donita Rose</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_5.webp" alt="" />
-      <div class="content fade">
-        <h2>Sofia</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_6.webp" alt="" />
-      <div class="content fade">
-        <h2>Luna</h2>
-        <a href='https://www.instagram.com/suburbangirlsdk/?locale=en_US"'
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_7.webp" alt="" />
-      <div class="content fade">
-        <h2>Kathrine</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_8.webp" alt="" />
-      <div class="content fade">
-        <h2>Vanilla</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_9.webp" alt="" />
-      <div class="content fade">
-        <h2>Molly</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_10.webp" alt="" />
-      <div class="content fade">
-        <h2>Ingrid</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_11.webp" alt="" />
-      <div class="content fade">
-        <h2>Sophie</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_4.webp" alt="" />
-      <div class="content fade">
-        <h2>Iris</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_2.webp" alt="" />
-      <div class="content fade">
-        <h2>Merle</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_6.webp" alt="" />
-      <div class="content fade">
-        <h2>Bjørk</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-    <div class="image_wrapper">
-      <img src="public/deltager/delt_5.webp" alt="" />
-      <div class="content fade">
-        <h2>Lulu</h2>
-        <a href="https://www.instagram.com/suburbangirlsdk/?locale=en_US"
-          ><img src="public/svger/instagram.svg" alt="" /></a
-        >
-      </div>
-    </div>
-  </section>
+  <GalleriDeltager/>
+   
+  
 </MainLayout>
 
 <style>
+.polaroid_img{
+    width: 100%;
+}
   .nederst_h1 {
     margin-top: -44px;
     margin-left: 1.4em;
@@ -595,49 +171,7 @@ import "../styles/general.css";
   }
   /*polaroid*/
 
-  figure {
-    width: 244px;
-    height: 292px;
-    position: relative;
-    background-color: #ffffff;
-    padding: 19px 19px 55px 19px;
-    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.42);
-    rotate: 10deg;
 
-    /* Tilføj disse regler for at centrere figuren */
-    margin: 0 auto; /* Centrer vandret */
-    margin-top: 30px;
-    margin-bottom: 40px;
-    display: flex; /* Brug flexbox */
-    flex-direction: column; /* Stak elementerne lodret */
-    justify-content: center; /* Centrer indholdet lodret */
-    align-items: center; /* Centrer indholdet vandret */
-  }
-  figure img {
-    width: 100%;
-  }
-  figcaption {
-    font-size: 25px;
-    text-align: center;
-    color: #2c2c2c;
-  }
-  figure .tape {
-    position: absolute;
-    width: 13%; /* Adjust size as needed */
-    height: 36%; /* Adjust size as needed */
-  }
-
-  .tape-top-left {
-    top: -39px;
-    left: 5px;
-    transform: rotate(40deg);
-  }
-
-  .tape-bottom-right {
-    bottom: -35px;
-    right: -1px;
-    transform: rotate(40deg);
-  }
   .caret {
     border-top: 10px solid rgb(0, 0, 0);
     border-left: 7px solid transparent;
@@ -648,58 +182,15 @@ import "../styles/general.css";
     vertical-align: middle;
   }
 
-  /* galleri*/
-  .image_wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .image_wrapper > img {
-    display: block;
-    width: 100%; /*gør at billederne udfylder hele deres grid*/
-    aspect-ratio: 1/1; /* gør at billederne bliver retankler*/
-    object-fit: cover; /*gør at alle billeder fylder lige meget*/
-    object-position: center;
-  }
-  .forsvind {
-    display: none;
-  }
-
-  .image_wrapper > .content {
-    position: absolute;
-    inset: 0;
-    font-size: 2rem;
-    background: rgba(244, 153, 184, 60%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-  }
-
-  .image_wrapper > .content,
-  .image_wrapper > img {
-    transition: 300ms ease-in-out;
-  }
-
-  .image_wrapper:hover > .content.fade {
-    opacity: 1;
-  }
-
-  h2 {
-    font-size: 1.2em;
-  }
-
+  
   @media (min-width: 769px) {
-    .grid1 {
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
+   
     .top_grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
       margin-top: 50px;
     }
-    .top_grid figure {
+    .top_grid article {
       order: 2; /* Dette gør at "figure" bliver sat som nummer to når det kommer ind i et grid */
     }
     .top_grid iframe {
@@ -710,50 +201,7 @@ import "../styles/general.css";
       margin-left: 10em;
       margin-right: 10em;
     }
-    figure {
-      width: 336px;
-      height: 390px;
-      position: relative;
-      background-color: #ffffff;
-      padding: 19px 19px 55px 19px;
-      box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.42);
-      rotate: 10deg;
-
-      /* Tilføj disse regler for at centrere figuren */
-      margin: 0 auto; /* Centrer vandret */
-      margin-top: 30px;
-      display: flex; /* Brug flexbox */
-      flex-direction: column; /* Stak elementerne lodret */
-      justify-content: center; /* Centrer indholdet lodret */
-      align-items: center; /* Centrer indholdet vandret */
-    }
-
-    figure img {
-      width: 100%;
-    }
-    figcaption {
-      font-size: 25px;
-      text-align: center;
-      color: black;
-      font-family: Amiko-Regular;
-    }
-    figure .tape {
-      position: absolute;
-      width: 13%; /* Adjust size as needed */
-      height: 36%; /* Adjust size as needed */
-    }
-
-    .tape-top-left {
-      top: -39px;
-      left: 5px;
-      transform: rotate(40deg);
-    }
-
-    .tape-bottom-right {
-      bottom: -35px;
-      right: -1px;
-      transform: rotate(40deg);
-    }
+    
     #pink_baggrund {
       background-color: var(--pink);
       margin: 0%;
