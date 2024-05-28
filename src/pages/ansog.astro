@@ -16,11 +16,11 @@ import Button from "../components/Button.astro";
 <img class="forsidebillede2" src="/ubg.webp" alt="billede af sub" />
 
   <div class="ansog_tekst_box">
-    <div class="logo_container">
-    <h2 class="deadline">DEADLINE D. 30.11.24</h2>
-    <p class="kickstart">Kickstart din karriere!</p>
-    <Button text="ANSØG NU"/>
-  </div>
+    <h2 class="deadline">ANSØGNINGSFRIST<br>D. 30.11.24</h2>
+    <p class="kickstart">Kickstart din karriere nu!</p>
+    <a href="https://docs.google.com/forms/d/1aT5OMMFyhVFeyxX2CWQICQA-FcZ2hhjhwoQ7THOj-IM/viewform?edit_requested=true">
+        <Button color="pink" opacity="sortbaggrund"><strong>ANSØG NU</strong></Button>
+      </a>
 </div>
 <img class="logo" src="/svger/logo.svg" alt="logo" />
 </div>
@@ -59,7 +59,7 @@ import Button from "../components/Button.astro";
     grid-row: 1;
     z-index: 1;
     margin-top: 12%;
-    margin-left: 3%;
+    margin-left: 5%;
 }
 
 .deadline{
@@ -82,6 +82,27 @@ margin-bottom: 1%;
 }
 .spørgsmål{
 margin-left: 5%;
+font-size: 0.7em;
+margin-top: -2%;
 }
+@media (min-width: 769px){
+    .tekst_container{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 6%;
+  }
+    .ansog_tekst_box{
+    margin-top: 12%;
+    margin-left: 10%;
+}
+.spørgsmål{
+margin-left: 10%;
+font-size: 1.2em;
+margin-top: -5%;
+margin-bottom: 5%;
+}
+
+}
+
 
 </style>
