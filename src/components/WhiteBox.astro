@@ -1,13 +1,12 @@
+
 ---
 const text = Astro.props.text;
 ---
-
 <div class="white-box">
     <img class="tape tape3" src="../svger/tape.svg" alt="tape">
     <img class="tape tape4" src="../svger/tape.svg" alt="tape">
     <p>{text}</p>
 </div>
-
 <style>
 .white-box {
     background-color: white;
@@ -15,26 +14,17 @@ const text = Astro.props.text;
     padding: 3rem;
     padding-bottom: 1rem;
     max-width: 70%;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
-     
     box-shadow: 0rem 0.3rem 5px var(--shadow);
   }
-
 p{
     line-height: 1.5rem;
   }
-
-  .tape3{
-    top: 5.2rem;
-    left: 2.5rem;
-    transform: rotate(100deg);
+  .tape3, .tape4 {
+    display: none;
   }
-  .tape4 {
-    top: 5.2rem;
-    right: 2.5rem;
-    transform: rotate(-10deg);
-  }
-
   @media (min-width: 769px){
   .white-box {
     background-color: white;
@@ -50,18 +40,17 @@ p{
     box-shadow: 0rem 0.3rem 5px var(--shadow);
     position: relative;
   }
-
 p{
     line-height: 4rem;
   }
-
   .tape3 {
+    display: initial;
     top: -2.5rem;
     left: -2rem;
     transform: rotate(100deg);
   }
-
   .tape4 {
+    display: initial;
     top: -2.5rem;
     right: -1.5rem;
     transform: rotate(-10deg);

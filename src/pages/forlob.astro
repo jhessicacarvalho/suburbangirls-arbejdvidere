@@ -5,19 +5,17 @@ import "../styles/general.css";
 import PostIt from "../components/PostIt.astro";
 import WhiteBox from "../components/WhiteBox.astro";
 ---
-
 <MainLayout>
  
-
   <img class="topIMG" src="../forlob_forside.webp" alt="To personer i et studio">
   <h1 class="margin">Vores forløb</h1>
   
-  <div class="grid-container" >
-    <div class="move-container move margin">
+  <div class="grid-container margin" >
+    <div>
       <p>SUBURBANGIRLS er et eksklusivt og forpligtende talent- og karriereforløb for for kvinder og kønsminoriteter mellem 15-25 år, der rapper, synger, skriver tekster og sange eller producerer beats, med interesse for hiphop, RnB og beslægtede genre. I forløbet får du værktøjer til at forbedre dine skills, lærer om musikbranchen, møde førende sangskrivere, producere, artister og rådgivere i musikbranchen og får netværk for livet!</p>
 </div>
    
-    <div>
+    <div class="row-span">
       <PostIt header="HVORFOR?">
         <ol>
           <li>Få viden og netværk inden for musikbranchen</li>
@@ -27,16 +25,14 @@ import WhiteBox from "../components/WhiteBox.astro";
         </ol>
       </PostIt>
     </div>
-
-     <div class="move-container move  margin">
+     <div>
       <p>Her har du mulighed for - i et trygt rum og et stærkt fælleskab med ligesindede kunstnere - at tage dine skills til det næste niveau. Det vigtigste kriterie for en plads på forløbet er dit talent, din motivation og dine ambitioner - ikke din erfaring. Men erfaring er heller ingen hindring!</p>
     </div>
   </div>
 
-
   <img class="pink-img" src="../paper-texture_pink_01.gif" alt="pink papir der er revet over" >    
   <div class="pink-container">
-    <h2>FORLØBETS INDHOLD</h2>
+    <h1>FORLØBETS INDHOLD</h1>
     
     <div class="grid-container2">
       <WhiteBox text="STÆRKT NETVÆRK & FÆLLESSKAB"/>
@@ -46,7 +42,6 @@ import WhiteBox from "../components/WhiteBox.astro";
     </div>
   </div>
   <img class="pink-img" src="../paper-texture_pink_03.gif" alt="pink papir der er revet over" >
-
 
   <div class="grid-container3">
     <div class="green-box">
@@ -69,7 +64,6 @@ import WhiteBox from "../components/WhiteBox.astro";
     </div>
   </div>
 
-
 <div class="white-container ">
   <div class="grid-container4">
   <div class="margin2">
@@ -78,14 +72,14 @@ import WhiteBox from "../components/WhiteBox.astro";
     <h2>Hvornår?</h2>
     <p>Forløbet i SUBURBANGIRLS foregår i perioden januar – september 2024. De fleste aktiviteter foregår i perioden januar - maj 2024. Der er release og afslutning i august samt individuelle rådgivningssamtaler i september, som afrunder forløbet.</p>
   </div>
-
+  <div class="post-it">
    <PostIt header="Du skal være opmærksom på:">
         <ul>
           <li>Det er gratis</li>
           <li>Det forventes du deltagere</li>
         </ul>
     </PostIt>
-
+    </div>
     <div class="info-pink1">
       <h2>ANSØGNINGSFRIST</h2>
       <p>30. NOVEMBER KL. 23:59</p>
@@ -102,24 +96,24 @@ import WhiteBox from "../components/WhiteBox.astro";
 </div>
 
 
-
   <img class="pink-img2" src="../paper-texture_pink_01.gif" alt="pink papir der er revet over" >    
   <div class="pink-container2">
       <div>
-          <h2 class="overskrift">TIDLIGERE DELTAGERS OPLEVELSER<br>MED SUBURBANGIRLS</h2>
+          <h1 class="overskrift">TIDLIGERE DELTAGERS OPLEVELSER<br>MED SUBURBANGIRLS</h1>
       </div>
     <div class="grid-container5"> 
-        <div class="polaroid-box polaroid-box1">
+     
+      <div class="polaroid-box polaroid-box1">
           <img class="tape tape13" src="../svger/tape.svg" alt="tape">
           <img class="tape tape14" src="../svger/tape.svg" alt="tape">
           <img src="../mariya.webp" alt="Mariya Apollonia" class="mariya-img">
           <h2>MARIYA APOLLONIA</h2>
           <p>SUBURBANGIRLS 22/23</p>
         </div>
+     
         <div class="citat-box citat-box1">
             <p>“SUBURBANGIRLS har givet mig en tro på min plads i musik-branchen og mine musikalske færdigheder. Den tro har jeg haft brug for, for ikke at brænde ud før jeg overhovedet havde fået fod indenfor”</p>
         </div>
-
         <div class="polaroid-box polaroid-box2">
             <img class="tape tape15" src="../svger/tape.svg" alt="tape">
             <img class="tape tape16" src="../svger/tape.svg" alt="tape">
@@ -130,7 +124,6 @@ import WhiteBox from "../components/WhiteBox.astro";
         <div class="citat-box citat-box2">
             <p>“SUBURBANGIRLS har klædt mig på til at være den artist, rapper og sanger jeg drømmer om at være. Jeg er mere end klar nu til at Danmark skal høre min stemme”</p>
         </div>
-
         <div class="polaroid-box polaroid-box3">
               <img class="tape tape17" src="../svger/tape.svg" alt="tape">
               <img class="tape tape18" src="../svger/tape.svg" alt="tape">
@@ -143,9 +136,7 @@ import WhiteBox from "../components/WhiteBox.astro";
           </div>
     </div>
 </div>
-
 </MainLayout>
-
 <style>
   .margin {
     margin-right: 1.2rem;
@@ -160,9 +151,9 @@ import WhiteBox from "../components/WhiteBox.astro";
   display: grid;
   grid-template-columns: auto;
   row-gap: 2rem;
+  max-width: 90vw;
  }
  
-
   
   /*---------- PINK BAGGRUND FORLØBETS INDHOLD ----------*/
    .pink-img {
@@ -178,10 +169,11 @@ import WhiteBox from "../components/WhiteBox.astro";
     margin-top: -1rem;
   }
   
-  .pink-container h2 {
+  .pink-container h1 {
     color: white;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
   }
   .grid-container2{
     display: grid;
@@ -207,30 +199,8 @@ import WhiteBox from "../components/WhiteBox.astro";
     width: 100%;
     height: auto;
   }
-  .green-box ol {
-    margin-left: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-   .green-box p {
-    margin-top: 1rem;
-    margin-bottom: 0em;
-    font-family: Amiko-Bold;
-  }
-  .green-box ol li {
-    font-family: Amiko-Regular;
-    font-size: 1rem;
-    line-height: 1.8rem;
-  }
-   .green-box ul {
-    margin-left: 1.2rem;
-    margin-bottom: 0em;
-  }
-  .green-box ul li {
-    font-family: Amiko-Regular;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
+  
+  
 /*---------- INFO-BOKS ----------*/
     .button{
       color: white;
@@ -242,6 +212,11 @@ import WhiteBox from "../components/WhiteBox.astro";
       font-family: Amiko-Regular;
       font-size: 0.8rem;
     }
+
+    .button:hover{
+
+    }
+
     .white-container{
       background-color: white;
       padding-bottom: 3rem;
@@ -252,7 +227,6 @@ import WhiteBox from "../components/WhiteBox.astro";
       padding: 2em;
       margin-top: 3rem;
     }
-
 /*---------- PINK INFO-BOKS ----------*/
   .info-pink1, .info-pink2{
     background-color: var(--pink);
@@ -265,7 +239,6 @@ import WhiteBox from "../components/WhiteBox.astro";
    .info-pink1 p, .info-pink2 p {
     margin-bottom: 1rem;
    }
-
   .italic{
     font-style: italic;
   }
@@ -326,13 +299,12 @@ import WhiteBox from "../components/WhiteBox.astro";
   .polaroid-box h2{
     margin-top: 1rem;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .polaroid-box img.mariya-img, img.mathilde-img, img.thannura-img {
   width: 100%;
   height: auto;
 }
-
   .polaroid-box p{
     margin-bottom: 0.5rem;
   }
@@ -361,11 +333,7 @@ import WhiteBox from "../components/WhiteBox.astro";
     margin-left: 10rem;
     margin-right: 10rem;
    }
-
-   h1{
-    margin-top: 3rem;
-    margin-bottom:1rem;
-   }
+  
    
   .grid-container{
   display: grid;
@@ -373,9 +341,14 @@ import WhiteBox from "../components/WhiteBox.astro";
   gap: 0;
   width:100%;
   height:100%;
+  margin-bottom: 10rem;
+ }
+
+ .row-span{
+  grid-column: 2;
+  grid-row: span 2;
  }
  
-
  
   /*----------- FORLØBETS INDHOLD -----------*/
   .grid-container2{
@@ -434,6 +407,10 @@ import WhiteBox from "../components/WhiteBox.astro";
   .margin2{
     margin-left:8rem;
   }
+
+  .post-it{
+    align-content: center;
+  }
    
   .info-pink1, .info-pink2{
     background-color: var(--pink);
@@ -446,7 +423,6 @@ import WhiteBox from "../components/WhiteBox.astro";
   .info-pink1{
     justify-self: end;
   }
-
   .info-pink2{
     justify-self: start;
   }
@@ -461,46 +437,44 @@ import WhiteBox from "../components/WhiteBox.astro";
     margin-top: -10rem;
    }
     .pink-container2 .overskrift {
-    font-size: 3rem;
+    font-size: 5rem;
   }
-  .pink-container2{
-   
-  }
+
   .grid-container5{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .polaroid-box {
     max-width: 100%;
     width: 50%;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
   }
-   .polaroid-box1{
-   
+
+   .polaroid-box h2{
+    margin-top: 1rem;
+    white-space: nowrap;
+    font-size: 3rem;
   }
+
+  .polaroid-box1, .polaroid-box3{
+    margin-right: -2rem;
+  }
+
+  /* skift side i gridet */
   .polaroid-box2{
     grid-column-start:2;
-    justify-content: start;
-  }
-   .polaroid-box3{
-    
+    margin-left: 0rem;
   }
   .citat-box2{
     grid-column-start: 1;
     grid-row-start: 2;
     justify-self: end;
   }
-  .polaroid-box h2{
-    margin-top: 1rem;
-    white-space: nowrap;
-    font-size: 3rem;
-  }
+
   .polaroid-box img.mariya-img, img.mathilde-img, img.thannura-img {
   width: 100%;
   height: auto;
 }
-
   .tape13, .tape15, .tape17 {
     top: -2.5rem;
     left: -2rem;
@@ -511,7 +485,8 @@ import WhiteBox from "../components/WhiteBox.astro";
   }
   .citat-box {
     padding: 5rem;
-    width: 80%;
+   max-width: 80%;
+   width: fit-content;
     height: fit-content;
     align-self: center;
   } 
