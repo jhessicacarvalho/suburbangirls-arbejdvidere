@@ -13,7 +13,7 @@ import WhiteBox from "../components/WhiteBox.astro";
   <h1 class="margin">Vores forløb</h1>
   
   <div class="grid-container" >
-    <div class="grid-together margin">
+    <div class="move-container move margin">
       <p>SUBURBANGIRLS er et eksklusivt og forpligtende talent- og karriereforløb for for kvinder og kønsminoriteter mellem 15-25 år, der rapper, synger, skriver tekster og sange eller producerer beats, med interesse for hiphop, RnB og beslægtede genre. I forløbet får du værktøjer til at forbedre dine skills, lærer om musikbranchen, møde førende sangskrivere, producere, artister og rådgivere i musikbranchen og får netværk for livet!</p>
 </div>
    
@@ -28,7 +28,7 @@ import WhiteBox from "../components/WhiteBox.astro";
       </PostIt>
     </div>
 
-     <div class="grid-together margin">
+     <div class="move-container move  margin">
       <p>Her har du mulighed for - i et trygt rum og et stærkt fælleskab med ligesindede kunstnere - at tage dine skills til det næste niveau. Det vigtigste kriterie for en plads på forløbet er dit talent, din motivation og dine ambitioner - ikke din erfaring. Men erfaring er heller ingen hindring!</p>
     </div>
   </div>
@@ -55,7 +55,7 @@ import WhiteBox from "../components/WhiteBox.astro";
       <ol>
         <li>Kvinde eller kønsminoritet</li>
         <li>15-25 år</li>
-        <li>Talentfuld</li>
+        <li>Motiveret</li>
       </ol>
       <p>Deruover skal du enten:</p>
       <ul>
@@ -162,6 +162,7 @@ import WhiteBox from "../components/WhiteBox.astro";
   row-gap: 2rem;
  }
  
+
   
   /*---------- PINK BAGGRUND FORLØBETS INDHOLD ----------*/
    .pink-img {
@@ -251,44 +252,6 @@ import WhiteBox from "../components/WhiteBox.astro";
       padding: 2em;
       margin-top: 3rem;
     }
-/*---------- GREEN POST-IT ----------*/
-    .post-it-green2 {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--green);
-    color: white;
-    padding: 2rem;
-    position: relative;
-    margin: 2rem auto;
-    padding-bottom: 0.5rem;
-    box-shadow: 0rem 0.4rem 5px var(--shadow);
-    transform: rotate(5deg);
-    width: fit-content;
-    max-width: 380px;
-  }
-  .post-it-green2 h2{
-    margin-bottom: 1rem;
-  }
-  .post-it-green2 ul {
-    margin-left: 1.2rem;
-  }
-  .post-it-green2 ul li {
-    font-family: Amiko-Regular;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .tape11 {
-    top: -1rem;
-    left: -1rem;
-    transform: rotate(100deg);
-  }
-  .tape12 {
-    top: 9.8rem;
-    right: -0.8rem;
-    transform: rotate(100deg);
-  }
 
 /*---------- PINK INFO-BOKS ----------*/
   .info-pink1, .info-pink2{
@@ -312,7 +275,8 @@ import WhiteBox from "../components/WhiteBox.astro";
     height: auto;
     margin-top: -2rem;
   }
-  grid-container5{
+  
+  .grid-container5{
     display: grid;
     grid-template-columns: 1fr;
      
@@ -411,6 +375,7 @@ import WhiteBox from "../components/WhiteBox.astro";
   height:100%;
  }
  
+
  
   /*----------- FORLØBETS INDHOLD -----------*/
   .grid-container2{
@@ -469,40 +434,7 @@ import WhiteBox from "../components/WhiteBox.astro";
   .margin2{
     margin-left:8rem;
   }
-    .post-it-green2 {
-    width: fit-content;
-    height: fit-content;
-    max-width: 80%;
-    max-height: 80%;
-    justify-content: center;
-    padding: 5rem;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    transform: rotate(0deg);
-  }
-  .post-it-green2 h2{
-    margin-bottom: 1rem;
-  }
-  .post-it-green2 ul {
-    margin-left: 2rem;
-  }
-  .post-it-green2 ul li {
-    font-family: Amiko-Regular;
-    font-size: 2rem;
-    line-height: 3rem;
-    margin-bottom: 0rem;
-  }
-
-  .tape11 {
-    top: -3rem;
-    left: -2rem;
-    transform: rotate(100deg);
-  }
-  .tape12 {
-    top: 21rem;
-    right: -2rem;
-    transform: rotate(100deg);
-  }
+   
   .info-pink1, .info-pink2{
     background-color: var(--pink);
     color: white;
@@ -514,7 +446,8 @@ import WhiteBox from "../components/WhiteBox.astro";
   .info-pink1{
     justify-self: end;
   }
-  info-pink2{
+
+  .info-pink2{
     justify-self: start;
   }
   .info-pink1 p, .info-pink2 p{
