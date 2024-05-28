@@ -4,6 +4,7 @@ import MainLayout from "../layout/MainLayout.astro";
 import "../styles/general.css";
 import PostIt from "../components/PostIt.astro";
 import WhiteBox from "../components/WhiteBox.astro";
+import Button from "../components/Button.astro";
 ---
 <MainLayout>
  
@@ -83,12 +84,16 @@ import WhiteBox from "../components/WhiteBox.astro";
     <div class="info-pink1">
       <h2>ANSØGNINGSFRIST</h2>
       <p>30. NOVEMBER KL. 23:59</p>
-      <a href="../ansog" class="button">ANSØG NU</a>
+      <a href="../ansog" class="button">
+         <Button>ANSØG NU</Button>
+      </a>
     </div>
     <div class="info-pink2">
       <h2>INFO-EVENT ONLINE</h2>
       <p>21. NOVEMBER KL. 19:00</p>
-      <a href="https://www.facebook.com/events/1538341646905951/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A725401289629408%7D%7D]%22%7D" class="button">LINK</a>
+      <a href="https://www.facebook.com/events/1538341646905951/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A725401289629408%7D%7D]%22%7D">
+        <Button>LINK</Button>
+      </a>
     </div>
    
 </div>
@@ -202,21 +207,6 @@ import WhiteBox from "../components/WhiteBox.astro";
   
   
 /*---------- INFO-BOKS ----------*/
-    .button{
-      color: white;
-      text-decoration: none;
-      border: 2px solid white;
-      border-radius: 8px;
-      text-align: center;
-      padding: 0.5rem 1rem 0.5rem 1rem;
-      font-family: Amiko-Regular;
-      font-size: 0.8rem;
-    }
-
-    .button:hover{
-
-    }
-
     .white-container{
       background-color: white;
       padding-bottom: 3rem;
@@ -429,9 +419,7 @@ import WhiteBox from "../components/WhiteBox.astro";
   .info-pink1 p, .info-pink2 p{
     margin-bottom: 2rem;
   }
-   .button {
-    font-size: 2rem;
-   }
+ 
   /*----------- POLAROID -----------*/
    .pink-img2{
     margin-top: -10rem;
