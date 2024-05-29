@@ -7,7 +7,7 @@ import Button from "../components/Button.astro";
 
 <MainLayout>
 <div class="forsidebillede_container">
-        <img src="/forside.webp" alt="forside billede" class="forsidebillede">
+        <img src="/forsidebillede.webp" alt="forside billede" class="forsidebillede">
         <h1 class="forside_overskrift">SUBURBANGIRLS</h1>
         <h1 class="forside_overskrift_skygge">SUBURBANGIRLS</h1>
         <div class="tekst-overlay">
@@ -112,6 +112,7 @@ import Button from "../components/Button.astro";
     text-align: left;
     margin-top: 28vw;
     margin-left: 6vw;
+    z-index: 5;
 }
 h2{
     margin-bottom: 0vw;
@@ -177,6 +178,7 @@ margin-bottom: 4vw;
     transform: rotate(2deg);
     /* width: fit-content; */
     margin: 2.5em;
+    margin-left: 13%;
     padding-bottom: 2em;
     box-shadow: 0em 0.2em 0.4em var(--shadow);
 }
@@ -192,15 +194,14 @@ margin-bottom: 4vw;
     transform: rotate(-1.5deg);
     /* width: fit-content; */
     margin: 2.5em;
+    margin-right: 13%;
     box-shadow: 0em 0.2em 0.4em var(--shadow);
 }
 
 .tape1 {
-    /* grid-column: 1;
-    grid-row: 1; */
     transform: rotate(100deg);
-    width: 50px;
-    height: 64px;
+    width: 90px;
+    height: 84px;
     margin-left: -19%;
     margin-top: -20%;
     position: absolute;
@@ -290,7 +291,7 @@ position: absolute;
 }
     .forsidebillede {
         /* object-position: 17% top; */
-        width: 70%;
+        width: 100%;
 }
 
     /* FORSIDE BILLEDE LAYOUT*/
@@ -304,7 +305,7 @@ position: absolute;
     align-self: center;
     color:var(--pink);
     text-align: center;
-    margin-right: 30%;
+    margin-right: 8%;
 }
 
 .tekst-overlay h2{
