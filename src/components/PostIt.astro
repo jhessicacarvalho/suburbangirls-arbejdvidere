@@ -5,7 +5,7 @@ const header = Astro.props.header;
 <div class="post-it-green">
     <img class="tape tape1" src="../svger/tape.svg" alt="tape">
     <img class="tape tape2" src="../svger/tape.svg" alt="tape">
-    <h2>{header}</h2>
+    <h1>{header}</h1>
         <slot></slot>
 </div>
 <style is:global>
@@ -20,6 +20,11 @@ const header = Astro.props.header;
     max-width: 80%;
     box-shadow: 0rem 0.4rem 5px var(--shadow);
 }
+
+h1{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 .tape {
     position: absolute;
     width: 20%;
@@ -36,18 +41,19 @@ const header = Astro.props.header;
 }
 @media (min-width: 769px) {
     .post-it-green{
-        padding:5rem;
         transform: rotate(5deg);
         width: fit-content;
         height: fit-content;
+        max-width: 70%;
     }
+
     .tape1{
-        top: -4rem;
-        left: -3rem;
+        top: -1.7rem;
+        left: -1.2rem;
     }
     .tape2 {
-    top: -3.5em;
-    right: -3.5rem;
+    top: -1.5rem;
+    right: -1.5rem;
 }
 }
 </style>
