@@ -1,8 +1,8 @@
 ---
-
+const { classId } = Astro.props;
 ---
 
-<section class="grid1 forsvind">
+<section class={`${classId} grid1 forsvind`}>
   <div class="image_wrapper">
     <img src="../deltager/delt_1.webp" alt="Portræt af Lili" />
     <div class="content fade">
