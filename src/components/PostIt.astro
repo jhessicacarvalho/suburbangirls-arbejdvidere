@@ -5,7 +5,7 @@ const header = Astro.props.header;
 <div class="post-it-green">
     <img class="tape tape1" src="../svger/tape.svg" alt="tape">
     <img class="tape tape2" src="../svger/tape.svg" alt="tape">
-    <h1>{header}</h1>
+    <h2>{header}</h2>
         <slot></slot>
 </div>
 <style is:global>
@@ -21,7 +21,7 @@ const header = Astro.props.header;
     box-shadow: 0rem 0.4rem 5px var(--shadow);
 }
 
-h1{
+h2{
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
