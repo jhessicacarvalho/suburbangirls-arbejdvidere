@@ -4,41 +4,29 @@ import "../styles/general.css";
 import PolaroidCard from "../components/PolaroidCard.astro";
 import GalleriDeltager from "../components/GalleriDeltager.astro";
 import DeltagerBTN from "../components/DeltagerBTN.astro";
-
 ---
 
 <MainLayout>
   <img
     class="forside_img"
-    src="./deltager/deltager_forside1.webp"
+    src="../deltager/deltager_forside1.webp"
     alt="Forsidebillede med alle deltagerne i forløbet"
   />
   <h1 style="margin-left: 1.4em">Deltagerne 2023</h1>
-  <section class="top_grid margin">
+  <section class="section top_grid margin">
     <article>
-<PolaroidCard><img class="polaroid_img" src="./polaroid/fællesbillede3.webp" alt="Fællesbillede"></PolaroidCard>
+      <PolaroidCard text="2023">
+        <img
+          class="polaroid_img"
+          src="../polaroid/everyone_3.webp"
+          alt="Fællesbillede"
+        />
+      </PolaroidCard>
     </article>
-   
-    <!-- <PolaroidCard
-      imagePath="/src/polaroid/fællesbillede3.webp"
-      altText="Another image description."
-    /> -->
-    <!-- <figure>
-      <img src="public/deltager/Fællesbillede_2.webp" alt="my_photo" />
-      <figcaption>2023</figcaption>
-      <img
-        class="tape tape-top-left"
-        src="public/deltager/lille_tape.webp"
-        alt=""
-      />
-      <img
-        class="tape tape-bottom-right"
-        src="public/deltager/lille_tape.webp"
-        alt=""
-      />
-    </figure> -->
+
     <div>
       <iframe
+        title="SUBURBANGIRLS spotify playlist"
         style="border-radius: 12px"
         src="https://open.spotify.com/embed/artist/0P0xnSm6cTBPpAQPY78oHN?utm_source=generator"
         width="100%"
@@ -47,22 +35,34 @@ import DeltagerBTN from "../components/DeltagerBTN.astro";
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-<DeltagerBTN />
-   
+      <DeltagerBTN selectBtn="button1" />
     </div>
   </section>
-<GalleriDeltager/>
- 
-  <img style="width: 100%;" src="./paper-texture_pink_01.gif" alt="pink overrevet papir" />
 
+  <div class="gallery-images-container">
+    <GalleriDeltager classId="section1" />
+  </div>
+
+  <img
+    style="width: 100%;"
+    src="../paper-texture_pink_01.gif"
+    alt="pink overrevet papir"
+  />
   <div id="pink_baggrund">
     <h1 style="margin-left: 1.4em">Deltagerne 2022</h1>
-    <section class="top_grid margin">
-        <article>
-            <PolaroidCard><img class="polaroid_img" src="./polaroid/Fællesbillede_2.webp" alt="Fællesbillede"></PolaroidCard>
-                </article>
+    <section class="section top_grid margin">
+      <article>
+        <PolaroidCard text="2022">
+          <img
+            class="polaroid_img"
+            src="../polaroid/everyone_2.webp"
+            alt="Fællesbillede"
+          />
+        </PolaroidCard>
+      </article>
       <div>
         <iframe
+          title="SUBURBANGIRLS spotify playlist"
           style="border-radius: 12px"
           src="https://open.spotify.com/embed/artist/0P0xnSm6cTBPpAQPY78oHN?utm_source=generator"
           width="100%"
@@ -71,21 +71,31 @@ import DeltagerBTN from "../components/DeltagerBTN.astro";
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"></iframe>
-          <DeltagerBTN id="button2"/>
+        <DeltagerBTN selectBtn="button2" />
       </div>
     </section>
-    <GalleriDeltager />
-   
+
+    <div class="gallery-images-container">
+      <GalleriDeltager classId="section2" />
+    </div>
   </div>
-  <img class="last_torn_paper" src="./paper-texture_pink_03.gif" alt="" />
+
+  <img class="last_torn_paper" src="../paper-texture_pink_03.gif" alt="" />
 
   <h1 class="nederst_h1">Deltagerne 2021</h1>
-  <section class="top_grid margin">
+  <section class="section top_grid margin">
     <article>
-        <PolaroidCard text="hejsa"><img class="polaroid_img" src="./polaroid/sub_convert.webp" alt="Fællesbillede"></PolaroidCard>
-            </article>
+      <PolaroidCard text="2021">
+        <img
+          class="polaroid_img"
+          src="../polaroid/sub_convert.webp"
+          alt="Fællesbillede"
+        />
+      </PolaroidCard>
+    </article>
     <div>
       <iframe
+        title="SUBURBANGIRLS spotify playlist"
         style="border-radius: 12px"
         src="https://open.spotify.com/embed/artist/0P0xnSm6cTBPpAQPY78oHN?utm_source=generator"
         width="100%"
@@ -93,23 +103,22 @@ import DeltagerBTN from "../components/DeltagerBTN.astro";
         frameborder="0"
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"></iframe>
-      <div class="button-container">
-        <button class="button" id="button3"
-          >Se deltagerne <span class="caret"></span>
-        </button>
-      </div>
+        loading="lazy"
+      >
+      </iframe>
+      <DeltagerBTN selectBtn="button3" />
     </div>
   </section>
-  <GalleriDeltager/>
-   
-  
+  <div class="gallery-images-container">
+    <GalleriDeltager classId="section3" />
+  </div>
 </MainLayout>
 
 <style>
-.polaroid_img{
+  .polaroid_img {
     width: 100%;
-}
+    height: auto;
+  }
   .nederst_h1 {
     margin-top: -44px;
     margin-left: 1.4em;
@@ -122,7 +131,7 @@ import DeltagerBTN from "../components/DeltagerBTN.astro";
   .forside_img {
     width: 100%;
     height: auto;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .grid1 {
     display: grid;
@@ -158,33 +167,20 @@ import DeltagerBTN from "../components/DeltagerBTN.astro";
     background-color: var(--pink);
     margin: 0%;
     position: relative;
-    top: -35px;
+    top: -45px;
     height: auto;
     z-index: 1;
   }
 
   .last_torn_paper {
-    top: -50px;
+    top: -60px;
     width: 100%;
     position: relative;
     rotate: 1deg;
   }
   /*polaroid*/
 
-
-  .caret {
-    border-top: 10px solid rgb(0, 0, 0);
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    display: inline-block;
-    margin-left: 10px;
-    margin-top: 10px;
-    vertical-align: middle;
-  }
-
-  
   @media (min-width: 769px) {
-   
     .top_grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -201,37 +197,23 @@ import DeltagerBTN from "../components/DeltagerBTN.astro";
       margin-left: 10em;
       margin-right: 10em;
     }
-    
+
     #pink_baggrund {
       background-color: var(--pink);
       margin: 0%;
       position: relative;
-      top: -100px;
+      top: -55px;
       height: auto;
     }
     .last_torn_paper {
-      top: -150px;
+      top: -120px;
       width: 100%;
       position: relative;
       rotate: 1deg;
     }
     .nederst_h1 {
       margin-top: -140px;
-      margin-left: margin-left: 1.4em;
+      margin-left: 1.4em;
     }
   }
 </style>
-
-<script>
-  function toggleImages() {
-    let imageContainers = document.querySelectorAll(".grid1");
-    imageContainers.forEach((container) => {
-      container.classList.toggle("forsvind");
-    });
-  }
-
-  document.querySelector("#button").addEventListener("click", toggleImages);
-  document.querySelector("#button2").addEventListener("click", toggleImages);
-  document.querySelector("#button3").addEventListener("click", toggleImages);
-</script>
-
