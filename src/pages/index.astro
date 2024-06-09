@@ -4,107 +4,128 @@ import "../styles/general.css";
 import Samarbejds from "../components/Samarbejds.astro";
 import Button from "../components/Button.astro";
 import PostIt from "../components/PostIt.astro";
+import { Image } from "astro:assets";
+import headerImage from "../images/frontpage.webp";
 ---
 
 <MainLayout>
-<div class="forsidebillede_container">
-        <img src="/frontpage.webp" alt="forside billede" class="forsidebillede">
-        <h1 class="forside_overskrift">SUBURBANGIRLS</h1>
-        <h1 class="forside_overskrift_skygge">SUBURBANGIRLS</h1>
-        <div class="tekst-overlay">
-         <h2 class="frontpage_tekst">KICKSTART DIN KARRIERE</h2>
-    <h3 class="forside_pb">MED VORES TALENTFORLØB</h3>
-    <a href="/ansog" class="pink_button">
-    <Button color="pink" opacity="hvidbaggrund" >ANSØG NU</Button>
-    </a>
-    <a href="/ansog" class="hvid_button">
-      <Button opacity="hvidbaggrund" >ANSØG NU</Button> </a>
-        </div>
-</div>
-
-    <div class="logo_container">
-    <img class="logo" src="/svger/logo.svg" alt="logo" /></div>
-    <p class="forside_p">SUBURBANGIRLS er et musikfællesskab, hvor du kan udvikle dine færdigheder og få indsigt i musikbranchen gennem møder med erfarne sangskrivere, producere og kunstnere. Her får du professionel vejledning og karriererådgivning fra brancheeksperter, samt muligheden for at opbygge et stærkt netværk af ligesindede kunstnere. SUBURBANGIRLS vil gerne ændre kønsbalancen i musikbranchen.</p>
-    <div class="desktop_grid">
-    <img class="forsidebillede2" src="/ubg.webp" alt="billede af sub" />
-        <iframe class="video" width="100%" height="auto" src="https://www.youtube.com/embed/IiYpoyWChSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+  <div class="forsidebillede_container">
+    <!-- <img src="/frontpage.webp" alt="forside billede" class="forsidebillede" /> -->
+    <Image src={headerImage} alt="forside billede" class="forsidebillede" />
+    <h1 class="forside_overskrift">SUBURBANGIRLS</h1>
+    <h1 class="forside_overskrift_skygge">SUBURBANGIRLS</h1>
+    <div class="tekst-overlay">
+      <h2 class="frontpage_tekst">KICKSTART DIN KARRIERE</h2>
+      <h3 class="forside_pb">MED VORES TALENTFORLØB</h3>
+      <a href="/ansog" class="pink_button">
+        <Button color="pink" opacity="hvidbaggrund">ANSØG NU</Button>
+      </a>
+      <a href="/ansog" class="hvid_button">
+        <Button opacity="hvidbaggrund">ANSØG NU</Button>
+      </a>
+    </div>
   </div>
 
-    <img class="pink-img1" src="../paper-texture_pink_01.gif" alt="pink papir der er revet over" >    
-   
-   
-    <div class="pink-container">
+  <div class="logo_container">
+    <img class="logo" src="/svger/logo.svg" alt="logo" />
+  </div>
+  <p class="forside_p">
+    SUBURBANGIRLS er et musikfællesskab, hvor du kan udvikle dine færdigheder og
+    få indsigt i musikbranchen gennem møder med erfarne sangskrivere, producere
+    og kunstnere. Her får du professionel vejledning og karriererådgivning fra
+    brancheeksperter, samt muligheden for at opbygge et stærkt netværk af
+    ligesindede kunstnere. SUBURBANGIRLS vil gerne ændre kønsbalancen i
+    musikbranchen.
+  </p>
+  <div class="desktop_grid">
+    <img class="forsidebillede2" src="/ubg.webp" alt="billede af sub" />
+    <iframe
+      class="video"
+      width="100%"
+      height="auto"
+      src="https://www.youtube.com/embed/IiYpoyWChSQ"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+  </div>
 
-      
-        <div class="hvid_box">
-            <img class="tape1" src="../svger/tape.svg" alt="tape">
-    <img class="tape2" src="../svger/tape.svg" alt="tape">
-            <h2 class="frontpage_tekst">ANSØGNINGSFRIST</h2>
-            <h3>30. NOVEMBER 2025</h3>
-            <a href="/ansog">
-              <Button color="green">ANSØG NU</Button>
-            </a>
+  <img
+    class="pink-img1"
+    src="../paper-texture_pink_01.gif"
+    alt="pink papir der er revet over"
+  />
+
+  <div class="pink-container">
+    <div class="hvid_box">
+      <img class="tape1" src="../svger/tape.svg" alt="tape" />
+      <img class="tape2" src="../svger/tape.svg" alt="tape" />
+      <h2 class="frontpage_tekst">ANSØGNINGSFRIST</h2>
+      <h3>30. NOVEMBER 2025</h3>
+      <a href="/ansog">
+        <Button color="green">ANSØG NU</Button>
+      </a>
     </div>
-    
 
-   
-         <div class="gron_box">
-            <img class="tape3" src="../svger/tape.svg" alt="tape">
-        <img class="tape4" src="../svger/tape.svg" alt="tape">
-            <h2 class="frontpage_tekst">INFO-EVENT ONLINE</h2>
-            <h3>21. NOVEMBER KL. 19.00</h3>
-            <a href="/ansog"><Button>LINK</Button></a>
-        </div>
-        
-
+    <div class="gron_box">
+      <img class="tape3" src="../svger/tape.svg" alt="tape" />
+      <img class="tape4" src="../svger/tape.svg" alt="tape" />
+      <h2 class="frontpage_tekst">INFO-EVENT ONLINE</h2>
+      <h3>21. NOVEMBER KL. 19.00</h3>
+      <a href="/ansog"><Button>LINK</Button></a>
     </div>
-    <img class="pink-img2" src="../paper-texture_pink_03.gif" alt="pink papir der er revet over" >
-  
-    <Samarbejds />
+  </div>
+  <img
+    class="pink-img2"
+    src="../paper-texture_pink_03.gif"
+    alt="pink papir der er revet over"
+  />
+
+  <Samarbejds />
 </MainLayout>
 
 <style>
-
-    /* FORSIDE BILLEDE LAYOUT*/
-.forsidebillede_container{
+  /* FORSIDE BILLEDE LAYOUT*/
+  .forsidebillede_container {
     display: grid;
     width: 100%;
     height: 43vh; /* Full viewport height mobile */
     overflow: hidden; /* Hide overflow */
-}
+  }
 
-/* Forside billedet */
-.forsidebillede {
+  /* Forside billedet */
+  .forsidebillede {
     grid-column: 1;
     grid-row: 1;
     width: 100%;
     height: 100%;
     object-fit: cover; /* Scale and crop */
     object-position: 17% center;
-}
-/* Overskrifter */
+  }
+  /* Overskrifter */
 
-.forside_overskrift, .forside_overskrift_skygge {
+  .forside_overskrift,
+  .forside_overskrift_skygge {
     font-size: 15vw;
     font-family: mostWasted;
     grid-column: 1;
     grid-row: 1;
     justify-self: center;
     margin-top: -1vw;
-}
-.forside_overskrift{
+  }
+  .forside_overskrift {
     color: var(--pink);
     z-index: 1;
-}
-.forside_overskrift_skygge{
+  }
+  .forside_overskrift_skygge {
     color: white;
     margin-left: 1vw;
     margin-top: -1.2vw;
-}
+  }
 
-/* Tekst overlay */
-.tekst-overlay {
+  /* Tekst overlay */
+  .tekst-overlay {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     justify-self: self-start;
@@ -114,37 +135,36 @@ import PostIt from "../components/PostIt.astro";
     margin-top: 20vw;
     margin-left: 6vw;
     z-index: 5;
-}
-h2{
+  }
+  h2 {
     margin-bottom: 0vw;
-}
+  }
 
+  /********************************* */
 
-/********************************* */
+  /*****LOGO */
+  .logo_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+  }
 
-/*****LOGO */
-.logo_container{
-display: flex;
-justify-content: center;
-margin-top: 1vw;
-margin-bottom: 2vw;
-}
-
-.logo{
+  .logo {
     scale: 0.9;
-}
+  }
 
-/*BILLEDER*/
-.forsidebillede2 {
+  /*BILLEDER*/
+  .forsidebillede2 {
     object-fit: cover; /* Scale and crop */
     object-position: 80% center;
     width: 100%;
     height: 80vw;
     margin-top: -5vw;
-}
+  }
 
-/*LYSERRØD BOKS*/
-.pink-img1 {
+  /*LYSERRØD BOKS*/
+  .pink-img1 {
     width: 100%;
     height: 40vw;
     object-fit: cover;
@@ -158,7 +178,7 @@ margin-bottom: 2vw;
     object-fit: cover;
   }
 
-.pink-container {
+  .pink-container {
     display: grid;
     background-color: var(--pink);
     margin-top: -4em;
@@ -170,7 +190,7 @@ margin-bottom: 2vw;
     grid-row: 1;
     justify-self: center;
     background-color: white;
-    color:var(--green);
+    color: var(--green);
     padding: 2.5em;
     padding-bottom: 1em;
     transform: rotate(2deg);
@@ -178,23 +198,23 @@ margin-bottom: 2vw;
     margin: 2.5em;
     padding-bottom: 2em;
     box-shadow: 0em 0.2em 0.4em var(--shadow);
-}
+  }
 
-.gron_box {
+  .gron_box {
     grid-column: 1;
     grid-row: 2;
     justify-self: center;
-    background-color:var(--green);
-    color:white;
+    background-color: var(--green);
+    color: white;
     padding: 2.5em;
     padding-bottom: 2em;
     transform: rotate(-1.5deg);
     /* width: fit-content; */
     margin: 2.5em;
     box-shadow: 0em 0.2em 0.4em var(--shadow);
-}
+  }
 
-.tape1 {
+  .tape1 {
     transform: rotate(100deg);
     width: 90px;
     height: 84px;
@@ -211,7 +231,7 @@ margin-bottom: 2vw;
     margin-top: -25%;
     position: absolute;
   }
-.tape3 {
+  .tape3 {
     transform: rotate(102deg);
     width: 90px;
     height: 84px;
@@ -229,166 +249,161 @@ margin-bottom: 2vw;
     position: absolute;
   }
 
-.forsidebillede3 {
+  .forsidebillede3 {
     width: 100%;
     height: auto;
-}
-.forsidebillede4 {
+  }
+  .forsidebillede4 {
     width: 100%;
     height: auto;
-}
-.forside_p{
-margin-left: 10vw;
-margin-right: 10vw;
-margin-top: 3vw;
-margin-bottom: 8vw;
-}
-
+  }
+  .forside_p {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 3vw;
+    margin-bottom: 8vw;
+  }
 
   .video {
     width: 100%;
     height: 300px;
-}
+  }
 
-
-
-/***lyserød forside box */
-.forside_box_container{
-display: flex;
-flex-direction: row;
-position: absolute;
-}
-.gron_box {
+  /***lyserød forside box */
+  .forside_box_container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+  .gron_box {
     /* position: absolute; */
     /* padding-right: 2rem;
     padding-left: 2rem; */
     width: auto;
-    background:var(--green);
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    background: var(--green);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     /* padding-top: 4rem;
     padding-bottom: 2rem; */
-}
+  }
 
-.hvid_button{
-  display: block;
-}
-.pink_button{
-  display: none;
-}
-/*DESKTOP VERSION*/
-@media (min-width: 769px){
-
-  .forside_p{
-    margin-bottom: 3vw;
-    font-size: 1.2rem;
-    line-height: 2rem;
-}
-  .hvid_button{
-  display: none;
-}
-.pink_button{
-  display: block;
-}
+  .hvid_button {
+    display: block;
+  }
+  .pink_button {
+    display: none;
+  }
+  /*DESKTOP VERSION*/
+  @media (min-width: 769px) {
+    .forside_p {
+      margin-bottom: 3vw;
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+    .hvid_button {
+      display: none;
+    }
+    .pink_button {
+      display: block;
+    }
     .forsidebillede {
       height: auto;
       width: 100%;
-}
+    }
 
     /* FORSIDE BILLEDE LAYOUT*/
-    .forsidebillede_container{
-    height: 91vh; /* Full viewport height mobile */
-}
+    .forsidebillede_container {
+      height: 91vh; /* Full viewport height mobile */
+    }
 
-.tekst-overlay {
-    justify-self: right;
-    align-self: center;
-    color:var(--pink);
-    text-align: center;
-    margin-right: 8%;
-    margin-top: 18em;
-}
-.frontpage_tekst{
-  font-size: 3rem;
-}
+    .tekst-overlay {
+      justify-self: right;
+      align-self: center;
+      color: var(--pink);
+      text-align: center;
+      margin-right: 8%;
+      margin-top: 18em;
+    }
+    .frontpage_tekst {
+      font-size: 3rem;
+    }
 
-.tekst-overlay h2{
-  color: var(--pink);
-}
+    .tekst-overlay h2 {
+      color: var(--pink);
+    }
 
-.forsidebillede2 {
-    height: 60vw;
-    grid-column: 1;
-    grid-row: 1;
-}
-.video {
-  grid-column: 1;
-    grid-row: 1;
-    margin-top: 28%;
-    margin-left: 7%;
-    border: 5px solid  var(--pink); /* Tilføjer en sort kant på 5px */
-    max-width: 800px;
-    height: 450px;
-}
-.desktop_grid{
-  display: grid;
-}
+    .forsidebillede2 {
+      height: 60vw;
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .video {
+      grid-column: 1;
+      grid-row: 1;
+      margin-top: 28%;
+      margin-left: 7%;
+      border: 5px solid var(--pink); /* Tilføjer en sort kant på 5px */
+      max-width: 800px;
+      height: 450px;
+    }
+    .desktop_grid {
+      display: grid;
+    }
 
-.pink-img1 {
-    height: 25vw;
-    margin-top: 5em;
+    .pink-img1 {
+      height: 25vw;
+      margin-top: 5em;
+    }
+    .pink-img2 {
+      height: 25vw;
+    }
+
+    .pink-container {
+      display: grid;
+      background-color: var(--pink);
+      margin-top: -8em;
+      margin-bottom: -6em;
+    }
+
+    .hvid_box {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .gron_box {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .tape1 {
+      scale: 1.3;
+      margin-left: -15%;
+      margin-top: -12%;
+    }
+
+    .tape2 {
+      scale: 1.3;
+      margin-left: 80%;
+      margin-top: -12%;
+    }
+    .tape3 {
+      scale: 1.3;
+      margin-left: -11%;
+      margin-top: -12%;
+    }
+
+    .tape4 {
+      scale: 1.3;
+      margin-left: 80%;
+      margin-top: -11%;
+    }
   }
-.pink-img2 {
-    height: 25vw;
-  }
+  @media (max-width: 1150px) {
+    .hvid_box {
+      grid-column: 1;
+      grid-row: 1;
+    }
 
-  .pink-container {
-    display: grid;
-    background-color: var(--pink);
-    margin-top: -8em;
-    margin-bottom: -6em;
+    .gron_box {
+      grid-column: 1;
+      grid-row: 2;
+    }
   }
-
-  .hvid_box {
-    grid-column: 1;
-    grid-row: 1;
-}
-  .gron_box {
-    grid-column: 2;
-    grid-row: 1;
-}
-.tape1 {
-  scale: 1.3;
-    margin-left: -15%;
-    margin-top: -12%;
-  }
-
-  .tape2 {
-    scale: 1.3;
-    margin-left: 80%;
-    margin-top: -12%;
-  }
-.tape3 {
-  scale: 1.3;
-    margin-left: -11%;
-    margin-top: -12%;
-  }
-
-  .tape4 {
-    scale: 1.3;
-    margin-left: 80%;
-    margin-top: -11%;
-  }
-}
-@media (max-width: 1150px){
-  .hvid_box {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.gron_box {
-    grid-column: 1;
-    grid-row: 2;
-}
-}
-
 </style>
