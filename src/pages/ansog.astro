@@ -12,7 +12,27 @@ import Button from "../components/Button.astro";
   <p>For at ansøge om at være en del af det nye SUBURBANGIRLS hold skal du udfylde det vedhæftede ansøgningsskema, som du finder længere nede ved “Ansøg nu”, hvor du hvor du fortæller lidt om dig selv og om dit liv med musik.</p>
 <p>Når du har sendt din ansøgning vil du modtage en ‘Tak for din ansøgning’ mail retur. Får du ikke den, så er det ikke sikkert vi har modtaget din ansøgning.</p>
 </div>
-
+<div class="grid-container3">
+  <div class="green-box">
+    <h1>VIL DU VÆRE MED?</h1>
+    <h2>Du skal være:</h2>
+    <ol>
+      <li>Kvinde eller kønsminoritet</li>
+      <li>15-25 år</li>
+      <li>Motiveret</li>
+    </ol>
+    <h2>Deruover skal du enten:</h2>
+    <ul>
+      <li>Rappe og/eller synge</li>
+      <li>Komponere (skrive dine egne <br> tekster og melodier)</li>
+      <li>Lave beats og/eller producere</li>
+    </ul>
+  </div>
+  <div>
+    <img class="studioIMG" src="../forlob-indspil.webp" alt="Kvinde der indspiller musik i et studio">
+  </div>
+</div>
+</div>
 <div class="grid_container">
 <img class="forsidebillede2" src="/ubg.webp" alt="billede af sub" />
 
@@ -75,7 +95,37 @@ import Button from "../components/Button.astro";
 color: var(--pink);
 margin-bottom: 1%;
 }
+.grid-container3{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .green-box {
+    background: var(--green);
+    padding: 2.5rem;
+    color: white;
+  }
+  .studioIMG {
+    width: 100%;
+    height: auto;
+  }
 
+  .green-box h1{
+    font-size: 2rem;
+  }
+
+  .green-box h2{
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .green-box ol li{
+    font-size: 1rem;
+    font-family: Amiko-Regular;
+  }
+  
+  
 .logo{
   grid-column: 1;
     grid-row: 1;
@@ -91,6 +141,36 @@ font-size: 0.7em;
 margin-top: -2%;
 line-height: 1rem;
 }
+ /*---------- GRØN BOKS M. BILLEDE ----------*/
+ .grid-container3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .green-box {
+    background: var(--green);
+    padding: 2.5rem;
+    color: white;
+  }
+  .studioIMG {
+    width: 100%;
+    height: auto;
+  }
+
+  .green-box h1{
+    font-size: 2rem;
+  }
+
+  .green-box h2{
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .green-box ol li{
+    font-size: 1rem;
+    font-family: Amiko-Regular;
+  }
 @media (min-width: 769px){
     .tekst_container{
     margin-left: 10%;
@@ -107,7 +187,50 @@ font-size: 0.9em;
 margin-top: -5%;
 margin-bottom: 5%;
 }
+ /*----------- GRØN BOKS M. BILLEDE -----------*/
+ .grid-container3{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 auto; 
+    margin-top: 3rem;
+    width: 70%;
+    height: 50%;
+  }
+  .green-box{
+    width: 80%;
+    height: 100%;
+    padding: 4rem;
+    align-content: center;
+    justify-self: end;
+}
+   .studioIMG {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
+  .green-box h1{
+    font-size: 2rem;
+  }
+
+   .green-box h2{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .green-box ol{
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  .green-box ol li{
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .green-box ul li{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 
