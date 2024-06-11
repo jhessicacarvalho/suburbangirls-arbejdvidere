@@ -24,6 +24,7 @@ body {
 @font-face {
   font-family: mostWasted;
   src: url(../fonts/mostwasted.woff2);
+  font-display: swap;
 }
 
 @font-face {

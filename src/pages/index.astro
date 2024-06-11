@@ -87,6 +87,12 @@ import headerImage from "../images/frontpage1.webp";
 
 <style>
   /* FORSIDE BILLEDE LAYOUT*/
+  @font-face {
+    font-family: mostWasted;
+    src: url(../fonts/mostwasted.woff2);
+    font-display: swap;
+  }
+
   .forsidebillede_container {
     display: grid;
     width: 100%;
@@ -108,7 +114,7 @@ import headerImage from "../images/frontpage1.webp";
   .forside_overskrift,
   .forside_overskrift_skygge {
     font-size: 15vw;
-    font-family: mostWasted;
+    font-family: mostWasted, sans-serif;
     grid-column: 1;
     grid-row: 1;
     justify-self: center;
@@ -298,6 +304,7 @@ import headerImage from "../images/frontpage1.webp";
       margin-bottom: 3vw;
       font-size: 1.2rem;
       line-height: 2rem;
+      font-family: mostWasted, sans-serif;
     }
     .hvid_button {
       display: none;
